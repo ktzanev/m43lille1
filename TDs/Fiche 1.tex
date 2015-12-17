@@ -1,0 +1,198 @@
+\documentclass[a4paper,10.5pt,french]{article}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{babel,amsmath,amssymb}
+\newcommand{\K}{\rm I\!K}
+\newcommand{\N}{\rm I\!N}
+\newcommand{\Z}{\mathbf {Z}}
+\newcommand{\Q}{\mathbf {Q}}
+\newcommand{\R}{\rm I\!R}
+\newcommand{\C}{\mathbf {C}}
+\newcommand{\D}{\mathcal {D}}
+\newcommand{\NN}{\mathcal {N}}
+\newcommand{\1}{\ensuremath{\mbox{\rm 1\kern-0.23em I}}}
+
+\addtolength{\oddsidemargin}{-2cm}
+\addtolength{\evensidemargin}{-2cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\topmargin}{-2cm}
+\addtolength{\textheight}{4cm}
+\begin{document}
+
+\begin{flushleft}
+
+{\bf Universit\'e des Sciences et Technologies de Lille} 
+{\bf UFR de Mathématiques Pures et Appliquées},
+{Ann\'ee 2014-2015}
+ \end{flushleft} 
+  {\bf Licence MIMP S4}, Module: Probabilités discrètes\\
+ 
+ \hrule
+ \vspace{1cm}
+ 
+\hskip 4cm {\large Fiche 1: Espaces probabilisés }\\
+
+
+
+{\bf Exercice 1:} 
+
+
+Trois enfants lancent chacun un ballon en direction d'un panier de basket.
+Il est convenu que celui qui marquera gagnera un paquet de bonbons, et 
+qu'en cas d'ex-\ae quo les vainqueurs se partageront le paquet.
+Si personne ne r\'eussit son panier, chacun mangera le tiers des bonbons. 
+En utilisant les \'ev\'enements:
+\begin{eqnarray*}
+A & = & \{\textrm{Arthur marque un panier}\},\\
+B & = & \{\textrm{B\'eatrice marque un panier}\},\\
+C & = & \{\textrm{C\'ecile marque un panier}\}.
+\end{eqnarray*}
+\'ecrire de fa\c con ensembliste les \'ev\'enements suivants:
+\begin{eqnarray*}
+D & = & \{\textrm{tous les trois r\'eussissent \`a marquer}\},\\
+E & = & \{\textrm{aucun ne r\'eussit \`a marquer}\},\\
+F & = & \{\textrm{B\'eatrice mange tous les bonbons}\},\\
+G & = & \{\textrm{les trois enfants mangent des bonbons}\},\\
+H & = & \{\textrm{C\'ecile mange au moins un bonbon}\},\\
+I & = & \{\textrm{Arthur ne re\c coit aucun bonbon}\}.
+\end{eqnarray*}
+Parmi tous ces \'ev\'enements, lesquels sont des \'ev\'enements \'el\'ementaires~?\\
+
+
+{\bf Exercice 2:}
+
+ On  lance un d\'e jusqu'\`a la premi\`ere
+apparition du six. Notons:
+$$ S_i=\{\textrm{Le $i$-\`eme lancer donne un six}\},\qquad i\in\N.$$
+Ecrire \`a l'aide des \'ev\'enements $S_i$ et $S_i^c$ l'\'ev\'enement
+$$ A=\{\textrm{La premi\`ere apparition du six a lieu \emph{apr\`es} le 5-\`eme
+lancer}\}.$$
+Est-ce le m\^eme \'ev\'enement que 
+$$
+B=\{\textrm{Six n'appara\^{\i}t pas au cours des 5 premiers lancers}\}?$$
+
+
+
+
+{\bf Exercice 3:} 
+
+Soit $n\in \N^*$. On tire \`{a} pile ou face $n$ fois.
+
+1) 
+Donner une repr\'esentation  de l'espace $\Omega$ des \'ev\'enements
+\'el\'ementaires de cette exp\'erience. 
+
+2) 
+Ecrire l'\'{e}v\'{e}nement $F=$``pile n'a pas \'{e}t\'{e} obtenu lors 
+des 2 premiers lancers'' comme sous-ensemble de $\Omega$.
+
+3)
+Soit $i\in \{1,\ldots,n\}$. 
+D\'{e}crire les \'{e}l\'{e}ments de l'\'{e}v\'{e}nement $E_i=$ 
+``le r\'{e}sultat du $i$-i\`{e}me lancer est pile''.
+
+4) 
+Ecrire \`{a} l'aide des \'{e}v\'{e}nements $E_i$ l'\'{e}v\'{e}nement $F$.
+
+5) 
+Ecrire \`{a} l'aide des \'{e}v\'{e}nements $E_i$ l'\'{e}v\'{e}nement 
+$G=$`` la pi\`{e}ce est tomb\'{e}e au moins une fois sur pile''.
+
+6) 
+Ecrire \`{a} l'aide des ensembles $E_i$ l'\'{e}v\'{e}nement 
+$H=$`` la pi\`{e}ce est tomb\'{e}e au moins deux fois sur pile''.\\
+
+
+
+{\bf Exercice 4:} 
+
+
+On tire, une \`a une, sans les remettre dans le paquet, cinq cartes dans un jeu de 32 cartes; 
+chaque succession de cartes  ainsi tir\'ees s'appelle une main.
+
+1) Quel est l'espace de probabilité que vous considérez ?
+
+2) Quelle est la probabilité qu'une main  contienne :
+\begin{itemize}
+\item[a)] que des cartes d'une m\^eme couleur ?
+\item[b)] exactement trois rois? au plus un roi? au moins un roi ou
+un as?
+\end{itemize}
+
+3) M\^emes questions si le tirage se fait avec remise.\\
+
+
+{\bf Exercice 5:}
+
+ On rel\`eve les dates d'anniversaire dans un groupe de $30$
+personnes (jours num\'erot\'es de $1$ \`a $365$). 
+On suppose que les jours de naissance sont \'equiprobables. 
+Quelle est la probabilit\'e que deux personnes au moins aient le
+m\^eme anniversaire?\\
+
+
+{\bf Exercice  6:}
+
+
+1)
+En d\'enombrant les fa\c{c}ons de tirer $n$ boules parmis $n$ boules blanches et $n$ boules
+noires, montrer que:
+$$ C_{2n}^n=\sum_{k=0}^n (C_n^k)^2.$$
+
+2) Retrouver cette formule \`a partir de l'identit\'e $(1+t)^n(1+t)^n=(1+t)^{2n}$.
+
+3) Deux personnes lancent chacune $n$ fois une pi\`ece de monnaie. Quelle
+est la probabilit\'e
+$p_n$ qu'elles obtiennent le m\^eme nombre de piles? 
+{\em Indication:} On utilisera l'\'equiprobabilit\'e sur
+l'espace $\Omega=\{{\tt f}, {\tt p}\}^{2n}$.
+
+4) 
+Donner un \'equivalent de $p_n$ quand $n$ tend vers $+\infty$.
+{\em Indication:} On rappelle la formule de Stirling:
+$$ n!=\sqrt{2\pi}n^{n+1/2}\exp{-n}(1+\epsilon_n),\quad\textrm{avec}\quad
+\lim_{n\to +\infty}
+\epsilon_n=0.$$
+
+5) Que pensez vous de l'affirmation suivante: \emph{ Lorsqu'on jette un
+grand nombre
+(pair) de fois une pi\`ece \'equilibr\'ee, il y a une forte probabilit\'e d'obtenir
+exactement
+autant de piles que de faces} ?\\
+
+
+{\bf Exercice  7:}
+
+
+Une secr\'etaire un peu distraite a tap\'e $ N $ lettres et pr\'epar\'e
+$ N $ enveloppes portant les adresses des destinataires, mais elle
+r\'epartit au hasard les lettres dans les enveloppes. 
+Pour mod\'eliser cette situation, on choisit comme espace probabilis\'e
+$ \Omega_N $ ensemble de toutes les permutations sur $ \{ 1,\ldots,N \} $
+muni de l'\'equiprobabilit\'e $ P_N $.
+Pour $ 1 \le j \le N $, on note $ A_j $ l'\'ev\'enement 
+{\em la $ j$-\`eme lettre se trouve dans la bonne enveloppe}.
+
+1)
+Calculer $ P_N(A_j) $.
+
+2)
+On fixe $ k $ entiers $ i_1 < i_2 < \cdots < i_k $ entre $ 1 $ et $ N $.
+D\'enombrer toutes les permutations $ \sigma $ sur $ \{1,\ldots,N\} $
+telles que $ \sigma(i_1)=i_1 $, $ \sigma(i_2)=i_2 $, \ldots, $ \sigma(i_k)=i_k $.
+En d\'eduire $ P_N(  A_{i_1} \cap A_{i_2} \cap \cdots \cap A_{i_k} ) $.
+
+3)
+On note $ B $ l'\'ev\'enement 
+{\em au moins une des lettres est dans la bonne enveloppe}.
+Exprimer $ B $ \`a l'aide des $ A_j $.
+
+4)
+Utiliser la formule de Poincar\'e pour calculer $ P_N(B) $
+et sa limite quand $ N $ tend vers l'infini.
+
+
+
+\end{document}
+

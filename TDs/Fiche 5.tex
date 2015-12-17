@@ -1,0 +1,174 @@
+\documentclass[a4paper,10.5pt,french]{article}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{babel,amsmath,amssymb}
+\newcommand{\K}{\rm I\!K}
+\newcommand{\N}{\rm I\!N}
+\newcommand{\Z}{\mathbf {Z}}
+\newcommand{\Q}{\mathbf {Q}}
+\newcommand{\R}{\rm I\!R}
+\newcommand{\C}{\mathbf {C}}
+\newcommand{\D}{\mathcal {D}}
+\newcommand{\NN}{\mathcal {N}}
+\newcommand{\1}{\ensuremath{\mbox{\rm 1\kern-0.23em I}}}
+
+\addtolength{\oddsidemargin}{-2cm}
+\addtolength{\evensidemargin}{-2cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\topmargin}{-2cm}
+\addtolength{\textheight}{4cm}
+\begin{document}
+
+\begin{flushleft}
+
+{\bf Universit\'e des Sciences et Technologies de Lille}, 
+{\bf UFR de Mathématiques Pures et Appliquées},
+{Ann\'ee 2014-2015}
+ \end{flushleft} 
+  {\bf Licence MIMP S4}, Module: Probabilités discrètes\\
+ 
+ \hrule
+ \vspace{1cm}
+ 
+\hskip 3cm {\large Fiche 5: Moments de variables aléatoires réelles }\\
+
+
+
+{\bf Exercice 1:} 
+
+On lance un d\'e équilibré. On d\'esigne par $X$ le nombre obtenu avec ce d\'e.
+
+1) D\'eterminer l'esp\'erance et la variance de $X$.
+
+2) Calculer l'esp\'erance et la variance de la somme obtenue en lan\c{c}ant trois d\'es. Comparer aux valeurs de l'espérance et de la variance de trois fois la valeur d'un dé.\\
+
+{\bf Exercice 2:}
+
+Alice et Bob jouent aux d\'es.
+La partie est d\'ej\`a bien engag\'ee, et \`a ce stade, 
+c'est \`a Alice de lancer les deux d\'es. 
+Si au moins un des d\'es donne cinq, elle gagne, et
+Bob doit lui donner 11 Euros. 
+Si elle n'obtient pas de cinq, elle perd, et elle doit alors 11 Euros \`a son adversaire. 
+Bob propose~: \\
+``tu ne lances pas les d\'es, tu me donnes directement 4 Euros et nous sommes quittes.'' \\
+On veut d\'eterminer si Alice a int\'er\^et \`a accepter ce march\'e.
+
+1) On note $ X $ la somme (positive ou n\'egative) que va gagner Bob.
+Quelle est la loi de $ X $~?
+
+2) Calculer son esp\'erance $ E(X) $.
+Comparer ce gain moyen avec la somme de 4 euros que Bob r\'eclame 
+et conclure.\\
+
+{\bf Exercice 3:} 
+
+Soit $X$ une variable al\'eatoire \`a valeurs dans $\N^*$ admettant une 
+espérance. 
+
+1) Montrer que l'on a $\displaystyle E(X)=\sum_{k=1}^\infty P(X \geq k) \, .$ 
+Donner et démontrer une formule analogue pour $E(X^2)$ (si $X^2$ admet une espérance).
+
+2) Soit $X$ est une variable al\'eatoire de loi g\'eom\'etrique de param\`etre $p$ ($p  \in ]0,1[$), utiliser la question précédente pour retrouver l'esp\'erance de $X$.\\
+
+{\bf Exercice 4:} 
+
+Dans une urne contenant au d\'epart une boule verte et une rouge on 
+effectue une suite de tirages d'une boule selon la proc\'edure suivante.
+Chaque fois que l'on tire une boule verte, on la remet dans l'urne
+{\em en y rajoutant une boule rouge}. Si l'on tire une boule rouge, on
+arr\^ete les tirages. On d\'esigne par $X$ le nombre de tirages effectu\'es
+par cette proc\'edure. On notera $V_i$ (resp. $R_i$) l'\'ev\'enement {\em
+obtention d'une boule verte au $i$-\`eme tirage} (resp. {\em rouge}).  
+
+1) Pour $k\in\N^{\ast}$, donner une expression de l'\'ev\'enement
+$\{X=k\}$ \`a l'aide des \'ev\'enements $V_i$ ($1\leq i\leq k-1$) et $R_k$.
+
+2) Que vaut $P(V_n\mid V_1\cap\ldots\cap V_{n-1})$ pour $n\geq 2$? 
+
+3) D\'eterminer la loi de $X$. 
+
+4) Calculer $E(X)$.
+
+5) Calculer l'esp\'erance de la variable al\'eatoire $\frac{1}{X}$.
+
+6) On recommence l'exp\'erience en changeant la proc\'edure: \`a chaque 
+tirage d'une boule verte on la remet dans l'urne {\em en y rajoutant
+une boule verte}. Comme pr\'ec\'edemment, on interrompt les tirages \`a la
+premi\`ere apparition d'une boule rouge. Soit $Y$ le nombre de tirages
+effectu\'es suivant cette nouvelle proc\'edure. Trouver la loi de $Y$. Que
+peut-on dire de l'esp\'erance de $Y$? Interpr\'eter.\\
+
+{\bf Exercice 5:}
+
+
+Soit $X$ une variable aléatoire discrète suivant une loi de Poisson de
+paramètre $\lambda>0$. Justifier que l'espérance de la variable aléatoire
+discrète $Y=e^X$ existe  et la calculer. On dit que $X$ admet un moment exponentiel.\\
+
+\newpage
+
+{\bf Exercice 6:}
+
+Soit $X$ une variable al\'eatoire, prenant toutes les valeurs
+enti\`eres comprises entre $-5$ et $5$, dont la loi est d\'efinie par~:
+$$
+P(X=i-5)=C_{10}^i\Bigl(\frac{1}{2}\Bigr)^{10}\qquad (0\leq i\leq 10).
+$$
+
+1) Calculer $E(X)$, $E(X^2)$, $Var(X)$.
+
+2) Donner la loi, l'esp\'erance, la variance de la variable al\'eatoire
+$Y$, d\'efinie par : $Y=1$ si $|X| > 2$, $Y=0$ sinon.\\
+
+{\bf Exercice 7:}
+
+Soit $X$ une v.a. telle que $E(X)=1$ et $\text{Var}(X)=5$. \\
+Trouver
+
+1) $E(2+X)^2$;
+
+2) $\text{Var}(4-3X)$.\\
+
+{\bf Exercice 8:}
+
+Soit $X$ et $Y$ deux variables al\'{e}atoires ind\'{e}pendantes de loi de 
+Bernoulli de param\`{e}tre 1/2. 
+On définit les variables al\'{e}atoires $S=X+Y$ et $D=|X-Y|$. 
+
+1) Donner les lois de $S$ et $D$.
+
+2) Calculer $Cov(S,D)$. Les variables al\'{e}atoires $S$ et $D$ sont-elles ind\'{e}pendantes ?\\
+
+
+{\bf Exercice 9:}
+
+On consid\`ere une suite de $n$ \'epreuves r\'ep\'et\'ees ind\'ependantes, chaque
+\'epreuve ayant $k$ r\'esultats possibles $r_1,\ldots,r_k$. 
+On note $p_i$ la probabilit\'e de r\'ealisation du r\'esultat $r_i$ lors 
+d'une \'epreuve donn\'ee. 
+Par exemple si on lance $n$ fois un d\'e, $k=6$ et $p_i=1/6$ pour 
+$1\leq i\leq 6$. 
+Si on lance $n$ fois une paire de d\'es et que l'on s'int\'eresse \`a la somme 
+des points, $k=11$ et les $p_i$ sont donn\'es par le tableau des $P(S=i+1)$~:
+$p_1=1/36$, $p_2=2/36$,\dots \\
+Pour $1\leq i\leq k$, notons $X_i$ le nombre de r\'ealisations du
+r\'esultat $r_i$ au cours des $n$ \'epreuves.
+
+1) Expliquer sans calcul pourquoi $Var(X_1+\cdots +X_k)=0$.
+
+2) Quelle est la loi de $X_i$? Que vaut sa variance?
+
+3) Pour $i\neq j$, donner la loi et la variance de $X_i+X_j$.
+
+4) En d\'eduire $Cov(X_i,X_j)$.
+
+5) Contr\^oler ce r\'esultat en d\'eveloppant $Var(X_1+\cdots +X_k)$ et
+en utilisant la premi\`ere question.
+
+
+\end{document}
+

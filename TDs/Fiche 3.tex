@@ -1,0 +1,273 @@
+\documentclass[a4paper,10.5pt,french]{article}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{babel,amsmath,amssymb}
+\newcommand{\K}{\rm I\!K}
+\newcommand{\N}{\rm I\!N}
+\newcommand{\Z}{\mathbf {Z}}
+\newcommand{\Q}{\mathbf {Q}}
+\newcommand{\R}{\rm I\!R}
+\newcommand{\C}{\mathbf {C}}
+\newcommand{\D}{\mathcal {D}}
+\newcommand{\NN}{\mathcal {N}}
+\newcommand{\1}{\ensuremath{\mbox{\rm 1\kern-0.23em I}}}
+
+\addtolength{\oddsidemargin}{-2cm}
+\addtolength{\evensidemargin}{-2cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\topmargin}{-2cm}
+\addtolength{\textheight}{4cm}
+\begin{document}
+
+\begin{flushleft}
+
+{\bf Universit\'e des Sciences et Technologies de Lille}, 
+{\bf UFR de Mathématiques Pures et Appliquées},
+{Ann\'ee 2014-2015}
+ \end{flushleft} 
+  {\bf Licence MIMP S4}, Module: Probabilités discrètes\\
+ 
+ \hrule
+ \vspace{1cm}
+ 
+\hskip 4cm {\large Fiche 3: Variables aléatoires réelles }\\
+
+
+
+{\bf Exercice 1:} 
+
+On jette un dé bleu et un dé vert non pip\'es et on consid\`ere la v.a. $X$ \'egale \`a
+la somme 
+des points obtenus. Quelle est la loi de $X$? M\^eme question pour la v.a.
+$Y$ \'egale au minimum des deux points obtenus.\\
+
+
+
+{\bf Exercice 2:}
+Une urne contient $N$ jetons num\'{e}rot\'{e}s de 1 \`{a} $N$. On en tire $n\leq N$ au hasard et sans remise. 
+Soit $k\in \{1,\ldots,N\}$. 
+
+1)
+D\'ecrire  un espace de probabilit\'e
+$(\Omega,\mathcal{P}(\Omega),P)$  associ\'e \`a l'exp\'erience
+al\'eatoire.
+
+2)
+Quelle est la probabilit\'{e} que les jetons tir\'{e}s aient tous des 
+num\'{e}ros inf\'{e}rieurs ou \'{e}gaux \`{a} $k$? 
+
+3)
+On d\'{e}signe par $X$ la variable \'{e}gale au plus grand num\'{e}ro 
+des jetons tir\'{e}s. D\'{e}terminer la loi de $X$.
+
+4)
+Mêmes questions avec un tirage avec remise.\\
+
+{\bf Exercice 3:} 
+
+
+On lance ensemble 5 d\'es. On met de cot\'e ceux qui ont donn\'e l'as,
+puis on relance les autres, et ainsi de suite jusqu'\`a ce que tous les d\'es
+aient amen\'e l'as. Le jeu s'arr\^ete au bout de $ X $ lancers. 
+
+1)
+Les d\'es sont num\'erot\'es, et pour $ i $ allant de $ 1 $ \`a $ 5 $ 
+on note $ X_i $ le nombre de fois o\`u le d\'e $ i $ a \'et\'e lanc\'e.
+Quelle est la loi de $ X_i $~?
+Donner sa fonction de r\'epartition $ F_i $.
+
+2)
+Exprimer $ X $ en fonction des $ X_i $ et d\'eterminer sa loi
+(il est conseill\'e d'exprimer la fonction de r\'epartition $ F $ de $ X $
+en fonction des $ F_i $).\\
+
+
+
+
+{\bf Exercice 4:} 
+
+Quatre chasseurs tirent ind\'ependamment les uns des autres  chacun un coup 
+de fusil  sur un bison en fuite. Chaque chasseur a une chance sur 4 de
+toucher le bison. On suppose qu'il faut au moins 3 balles pour tuer un
+bison.
+ 
+1)
+Quelle est la loi de la v.a. $X$ \'egale au nombre de balles
+touchant le bison? 
+
+2)
+Quelle est la probabilit\'e que l'animal soit touch\'e?
+
+3)
+Quelle est la probabilit\'e qu'il soit tu\'e?
+
+4)
+Sachant qu'il a \'et\'e touch\'e, quelle est la probabilit\'e qu'il soit 
+simplement bless\'e?\\
+
+
+
+{\bf Exercice 5:}
+
+
+Un moteur d'avion tombe en panne avec la probabilité $1-p$,~~ $p \in ]0,1[$,
+indépendamment des autres moteurs. Pour réussir le vol l'avion a besoin que la 
+majorité de ses moteurs fonctionne correctement (sans panne).
+
+1)
+Calculer la probabilité de réussir le vol pour un avion à $3$ moteurs.
+
+2)
+Calculer la probabilité de réussir le vol pour un avion à $5$ moteurs.
+
+3)
+Déterminer pour quelle valeur de $p$ l'avion à $5$ moteurs est préférable
+à l'avion à $3$ moteurs.\\
+
+{\bf Exercice 6:}
+
+
+Soit $X$ une v.a. de Poisson de param\`etre $\lambda>0$. On d\'efinit la v.a. 
+$Y$ de la mani\`ere suivante:
+\begin{itemize}
+\item Si $X$ prend une valeur nulle ou impaire alors $Y$ prend la valeur 
+$0$.
+\item Si $X$ prend une valeur paire alors $Y$ prend la valeur $X/2$.
+\end{itemize}
+Trouver la loi de $Y$.\\
+
+
+
+
+{\bf Exercice 7:}
+
+1)
+Si $X$ suit la loi de Poisson de param\`etre $\lambda>0$, montrer que:
+$$
+\forall k>\lambda-1,\qquad
+P(X\geq k)<P(X=k)\frac{k+1}{k+1-\lambda}.
+$$
+\emph{Indication:} On part de:
+$$
+\sum_{j=k}^{+\infty}\frac{\lambda^j}{j!}=
+\frac{\lambda^k}{k!}\Bigl(1+\frac{\lambda}{k+1}+
+\frac{\lambda^2}{(k+1)(k+2)}+\frac{\lambda^3}{(k+1)(k+2)(k+3)}
++\cdots\cdots\Bigr)
+$$
+et on majore la parenth\`ese par la somme d'une s\'erie g\'eom\'etrique\dots
+
+2)
+En déduire que:
+$$
+\forall k\geq 2\lambda-1,\qquad
+P(X>k)<P(X=k).
+$$
+
+
+{\bf Exercice  8:}
+
+1)
+Quelle est la probabilité d'obtenir un double lorsqu'on lance une fois une
+paire de dés~?
+
+2)
+On lance de façon répétée une paire de dés jusqu'à la première obtention d'un
+double. Soit $X$ la variable aléatoire égale au nombre de lancers ainsi
+réalisés.
+Donner, en justifiant votre réponse, les valeurs de $P(X=1)$, $P(X=2)$ et
+ plus généralement $P(X=k)$ où $k\geq 1$ est un entier quelconque. Comment
+ s'appelle la loi de $X$~?
+
+3)
+Soit $n\geq 1$ un nombre entier. Calculer \emph{directement} la
+probabilité de n'obtenir aucun double lors des $n$ premiers lancers. En
+déduire $P(X>n)$.
+
+4)
+Pour $k>n$, vérifier que
+$$
+P(X=k \mid X>n)=P(X=k-n).
+$$
+Donner une interprétation.\\
+
+
+{\bf Exercice  9:}
+
+
+{\em Dans cet exercice, on précisera pour les variables aléatoire $X$, $V$ et $Y$~:
+\begin{itemize}
+\item
+les valeurs que peut prendre la variable aléatoire,
+\item
+leur loi ainsi que le nom de leur loi s'il existe.
+\end{itemize}
+}
+
+1)
+Monsieur Zzzz possède 50 cravates, dont une seule est à rayures.
+Tous les matins, il prend une cravate au hasard dans l'armoire,
+et tous les soirs il remet la cravate du jour à sa place.\\
+On observe Monsieur Zzzz pendant 20 jours et on appelle $ X $ le nombre 
+de fois où il porte une cravate à rayures. \\
+Application numérique~: Calculer $ P(X=1) $.
+
+2)
+Monsieur Zzzz part en voyage.
+Il met dans sa valise 20 cravates prises au hasard dans l'armoire. \\
+On appelle $ V $ le nombre de cravates à rayures contenues dans la valise~? \\
+Application numérique~: Calculer $ P(V=1) $.
+
+3)
+Monsieur Zzzz possède aussi 10 chemises dont 3 sont bleues.
+Il prend 5 chemises au hasard et les mets dans sa valise. \\
+On appelle $ Y $ le nombre de chemises bleues contenues dans la valise~? \\
+Application numérique~: Calculer $ P(Y=1) $.\\
+
+{\bf Exercice  10:}
+
+Un \'ecran d'ordinateur est form\'e de petits points lumineux appel\'es pixels.
+Il comporte 768 lignes de 1024 pixels, soit 786432 pixels en tout.
+\begin{itemize}
+\item[1) ] 
+On utilise un proc\'ed\'e de fabrication qui assure que les pixels sont ind\'ependants
+et que chacun n'a qu'une probabilit\'e $ 9.10^{-7} $ d'\^etre inutilisable.
+Quelle est la loi du nombre $ X $ de pixels grill\'es sur l'\'ecran~?
+\item[2) ]
+L'\'ecran est invendable si trois pixels au moins sont grill\'es.
+Calculer (en justifiant!) une valeur approch\'ee de la probabilit\'e 
+pour un \'ecran d'\^etre invendable.\\
+\end{itemize}
+
+{\bf Exercice  11:}
+
+Une entreprise fabrique des chaises \`a roulettes,
+\'equip\'ees chacune de 5 roulettes.
+
+1)
+Par suite d'une erreur de livraison, l'entreprise a re\c cu
+10\,000 roulettes en bon \'etat et 1\,000 roulettes
+pr\'esentant un d\'efaut de fabrication.
+Parmi les 2\,200 chaises ainsi fabriqu\'ees, on en teste une
+au hasard.
+Calculer avec pr\'ecision la probabilit\'e que ses cinq roulettes
+soient en bon \'etat.
+
+2)
+Quelle est la loi du nombre $ X $ de roulettes d\'efectueuses dont
+est munie la chaise test\'ee~?
+Par quelle loi peut-on l'approcher~?
+En utilisant cette approximation, \'evaluer la probabilit\'e que la chaise
+test\'ee ait exactement une roulette d\'efectueuse,
+et la probabilit\'e qu'elle en ait exactement trois.
+
+3)
+En utilisant la m\^eme approximation, calculer la probabilit\'e
+que la chaise soit en bon \'etat et comparer
+avec le r\'esultat de la premi\`ere question.
+
+
+\end{document}
+
