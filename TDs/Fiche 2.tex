@@ -1,202 +1,133 @@
-\documentclass[a4paper,10.5pt,french]{article}
-\usepackage[T1]{fontenc}
-\usepackage[ansinew]{inputenc}
-\usepackage{babel}
-\usepackage[T1]{fontenc}
-\usepackage[ansinew]{inputenc}
-\usepackage{babel,amsmath,amssymb}
-\newcommand{\K}{\rm I\!K}
-\newcommand{\N}{\rm I\!N}
-\newcommand{\Z}{\mathbf {Z}}
-\newcommand{\Q}{\mathbf {Q}}
-\newcommand{\R}{\rm I\!R}
-\newcommand{\C}{\mathbf {C}}
-\newcommand{\D}{\mathcal {D}}
-\newcommand{\NN}{\mathcal {N}}
-\newcommand{\1}{\ensuremath{\mbox{\rm 1\kern-0.23em I}}}
+\documentclass[a4paper,12pt,reqno]{amsart}
+\usepackage{macros_M43}
 
-\addtolength{\oddsidemargin}{-2cm}
-\addtolength{\evensidemargin}{-2cm}
-\addtolength{\textwidth}{4cm}
-\addtolength{\topmargin}{-2cm}
-\addtolength{\textheight}{4cm}
 \begin{document}
 
-\begin{flushleft}
-
-{\bf Universit\'e des Sciences et Technologies de Lille}, 
-{\bf UFR de Math�matiques Pures et Appliqu�es},
-{Ann\'ee 2014-2015}
- \end{flushleft} 
-  {\bf Licence MIMP S4}, Module: Probabilit�s discr�tes\\
- 
- \hrule
- \vspace{1cm}
- 
-\hskip 3cm {\large Fiche 2: Probabilit�s conditionnelles et ind�pendance }\\
+% ===================================================================
+\hautdepage{Fiche 2: Probabilités conditionnelles et indépendance}
+% ===================================================================
 
 
+%-----------------------------------
+\begin{exo}
 
-{\bf Exercice 1:} 
+  Une urne contient $10$ jetons jaunes, $5$ blancs et $1$ rouge. J'ai tiré un jeton de cette urne et je vous annonce qu'il n'est pas rouge. Quelle est la probabilité qu'il soit jaune?
 
- Une urne contient $10$ jetons jaunes, $5$ blancs et $1$ rouge. 
-J'ai tir� un jeton de cette urne et je vous annonce qu'il n'est pas rouge. 
-Quelle est la probabilit� qu'il soit jaune?\\
+\end{exo}
 
+%-----------------------------------
+\begin{exo}
 
+  Un joueur de tennis a une probabilité de $40\%$ de passer sa première balle de service. S'il échoue, sa probabilité de passer sa deuxième balle est $70\%$. Lorsque sa première balle de service passe, sa probabilité de gagner le point est $80\%$, tandis que sa probabilité de gagner le point lorsqu'il passe sa deuxième balle de service n'est plus que $50\%$. Calculer
 
-{\bf Exercice 2:}
+  \begin{enumerate}
+    \item La probabilité qu'il passe sa deuxième balle et celle qu'il fasse une double faute.
+    \item La probabilité qu'il perde le point sur son service.
+    \item Sachant qu'il a perdu le point, quelle est la probabilité que ce soit sur une double faute ?
+  \end{enumerate}
 
-Un joueur de tennis a une probabilit\'e de $40\%$ de passer sa premi\`ere balle
-de service. S'il \'echoue, sa probabilit\'e de passer sa deuxi\`eme balle est
-$70\%$. Lorsque sa premi\`ere balle de service passe, sa probabilit\'e de
-gagner
-le point est $80\%$, tandis que sa probabilit\'e de gagner le point lorsqu'il
-passe sa deuxi\`eme balle de service n'est plus que $50\%$. Calculer
+\end{exo}
 
-1)
-La probabilit\'e qu'il passe sa deuxi\`eme
-balle et celle qu'il fasse une double faute.
+%-----------------------------------
+\begin{exo}
 
-2)
-La probabilit\'e qu'il perde le point sur son service.
+  On cherche une girafe qui, avec une probabilité $p/7$, se trouve dans l'un des quelconques des $7$ étages d'un immeuble, et avec probabilité $1-p$ hors de l'immeuble. On a exploré en vain les $6$ premiers étages.
 
-3)
-Sachant qu'il a perdu le point, quelle est la probabilit\'e que ce soit
-sur une double faute ?\\
+  \begin{enumerate}
+    \item Quelle est la probabilité qu'elle habite au  septième étage? On note $f(p)$ cette probabilité.
+    \item Représenter  la fonction $p\mapsto f(p)$
+  \end{enumerate}
 
+\end{exo}
 
+%-----------------------------------
+\begin{exo}
 
-{\bf Exercice 3:} 
+  Un test permet de dépister si une pièce est défectueuse. Il n'est cependant pas fiable absolument. Ce test donne pour pièce défectueuse une pièce défectueuse dans $95\%$ des cas et une pièce non défectueuse pour une pièce saine dans $90\%$ des cas. Un lot de pièces contient $8\%$ de pièces défectueuses. On prend une des pièces du lot au hasard : la pièce choisie est testée et déclarée défectueuse. Quelle est la probabilité pour qu'elle le soit vraiment ?
 
-On cherche une girafe qui, avec une probabilit\'e $p/7$, se trouve dans l'un des quelconques des $7$ \'etages d'un immeuble, et avec probabilit\'e $1-p$ hors de l'immeuble. On a explor� en vain les $6$ premiers �tages.
+\end{exo}
 
-1)
-Quelle est la probabilit\'e qu'elle habite au  septi\`eme \'etage?
-On note $f(p)$ cette probabilit\'e.
+%-----------------------------------
+\begin{exo}
 
-2)
-Repr\'esenter  la fonction $p\rightarrow f(p)$\\
+  Un avion a disparu et la région  où il s'est écrasé est divisée pour sa
+  recherche en trois zones de même probabilité. Pour $i=1,2,3$, notons
+  $1-\alpha_i$ la probabilité que l'avion soit retrouvé par une recherche
+  dans la zone $i$ s'il est effectivement dans cette zone. Les constantes
+  $\alpha_i$ représentent les probabilités de manquer l'avion et sont
+  généralement attribuables à l'environnement de la zone (relief,
+  végétation,\dots). On notera $A_i$ l'événement \emph{l'avion est dans la
+  zone $i$}, et $R_i$ l'événement \emph{l'avion est retrouvé dans la zone
+  $i$} ($i=1,2,3$).
 
+  \begin{enumerate}
+    \item  Pour $i=1,2,3$, déterminer les probabilités que l'avion soit dans la zone $i$ sachant que la recherche dans la zone 1 a été infructueuse.
+    \item  Etudier brièvement les variations de ces trois probabilités conditionnelles considérées comme fonctions de $\alpha_1$ et commenter les résultats obtenus.
+  \end{enumerate}
 
+\end{exo}
 
-{\bf Exercice 4:} 
+%-----------------------------------
+\begin{exo}
 
-Un test permet de d�pister si une pi�ce est d�fectueuse. Il n'est
-cependant pas fiable absolument. Ce test donne pour pi�ce d�fectueuse
-une pi�ce d�fectueuse dans 95 $\%$ des cas et une pi�ce non
-d�fectueuse pour une pi�ce saine dans 90 $\%$ des cas. Un lot de
-pi�ces contient 8 $\%$ de pi�ces d�fectueuses. On prend une des pi�ces
-du lot au hasard : la pi�ce choisie est test�e et d�clar�e d�fectueuse. Quelle est la probabilit� pour qu'elle le soit vraiment ?\\
+  On lance deux dés et on considère les événements :
+  \begin{eqnarray*}
+    A & = & \{\text{le résultat du premier dé est impair}\},\\
+    B & = & \{\text{le résultat du second dé est pair}\},\\
+    C & = & \{\text{les résultats des deux dés sont de même parité}\}.
+  \end{eqnarray*}
+  Etudier l'indépendance deux à deux des événements $A$, $B$ et $C$,
+  puis l'indépendance mutuelle (indépendance de la famille) $A,B,C$.
 
+\end{exo}
 
-{\bf Exercice 5:}
+%-----------------------------------
+\begin{exo}
 
+  On s'intéresse à la répartition des sexes des enfants d'une famille de
+  $n$ enfants. On prend comme modélisation
+    $$
+      \Omega_n=\{{\tt f},{\tt g}\}^n=\{\,(x_1,\ldots,x_n),\; x_i\in\{{\tt f},{\tt g}\}, i=1,\dots,n\},
+    $$
+  muni de l'équiprobabilité. On considère les évènements:
+    $$
+      A=\{\text{la famille a des enfants des deux sexes}\}\quad
+      B=\{\text{la famille a au plus une fille}\}.
+    $$
 
-Un avion a disparu et la r\'egion  o\`u il s'est \'ecras\'e est divis\'ee pour sa 
-recherche en trois zones de m\^eme probabilit\'e. Pour $i=1,2,3$, notons
-$1-\alpha_i$ la probabilit\'e que l'avion soit retrouv\'e par une recherche
-dans la zone $i$ s'il est effectivement dans cette zone. Les constantes
-$\alpha_i$ repr\'esentent les probabilit\'es de manquer l'avion et sont
-g\'en\'eralement attribuables \`a l'environnement de la zone (relief,
-v\'eg\'etation,\dots). On notera $A_i$ l'\'ev\'enement \emph{l'avion est dans la
-zone $i$}, et $R_i$ l'\'ev\'enement \emph{l'avion est retrouv\'e dans la zone
-$i$} ($i=1,2,3$). 
+  \begin{enumerate}
+    \item  Montrer que pour $n\geq 2$, $P(A)=(2^n-2)/2^n$ et $P(B)=(n+1)/2^n$.
+    \item  En déduire que $A$ et $B$ ne sont indépendants que si $n=3$.
+  \end{enumerate}
 
-1)
- Pour $i=1,2,3$, d\'eterminer les probabilit\'es que l'avion soit dans la 
-zone $i$ sachant que la recherche dans la zone 1 a \'et\'e infructueuse.
+ \end{exo}
 
-2)
- Etudier bri\`evement les variations de ces trois probabilit\'es 
-conditionnelles consid\'er\'ees comme fonctions de $\alpha_1$ et commenter les
-r\'esultats obtenus.\\
+%-----------------------------------
+\begin{exo}
 
+  On effectue des lancers répétés d'une paire de dés discernables et on observe pour
+  chaque lancer la \emph{somme} des points indiqués par les deux dés. On se
+  propose de calculer de deux façons la probabilité de l'événement $E$ défini
+  ainsi: \emph{dans la suite des résultats observés, la première obtention d'un
+  $9$ a lieu avant la première obtention d'un $7$.}
 
-{\bf Exercice 6:}
+  \begin{enumerate}
+    \item  Quelle est la probabilité de n'obtenir ni $7$ ni $9$ au cours d'un lancer?
+    \item \emph{Première méthode:} On note $F_i=\{$\emph{obtention d'un $9$ au $i$-ème lancer}$\}$ et pour $n>1$, $E_n=\{$ \emph{ni $7$ ni $9$ ne sont obtenus au cours des $n-1$ premiers lancers et le $n$-ième lancer donne $9$}$\}$. Dans le cas particulier $n=1$, on pose $E_1=F_1$.
+      \begin{enumerate}
+        \item Exprimer $E$ à l'aide d'opérations ensemblistes sur les $E_n$ ($n\geq 1$). Exprimer de même chaque $E_n$ à l'aide  des $F_i$ et des  $H_i=\{$ \emph{ni $7$ ni $9$ au $i$-ème lancer}$\}$.
+        \item Calculer $P(E_n)$ en utilisant l'indépendance des lancers.
+        \item Calculer $P(E)$.
+      \end{enumerate}
+    \item \emph{Deuxième méthode:}  On note $G_1=\{$ \emph{obtention d'un $7$ au premier lancer}$\}$.
+      \begin{enumerate}
+        \item Donner une expression de $P(E)$ en utilisant le conditionnement par la partition $\{F_1,G_1,H_1\}$.
+        \item Donner sans calcul les valeurs de $P(E\mid F_1)$, $P(E\mid G_1)$ et expliquer pourquoi $P(E\mid H_1)=P(E)$.
+        \item En déduire la valeur de $P(E)$.
+      \end{enumerate}
+  \end{enumerate}
 
-
-On lance deux d\'es et on consid\`ere les \'ev\'enements :
-
-$A$ : ``le r\'esultat du premier d\'e est impair"
-
-$B$ : ``le r\'esultat du second d\'e est pair"
-
-$C$ : ``les r\'esultats des deux d\'es sont de m\^eme parit\'e"\\
-Etudier l'ind\'ependance deux \`a deux des \'ev\'enements $A$, $B$ et $C$, 
-puis l'ind\'ependance mutuelle (ind\'ependance de la famille) $A,B,C$.\\
-
-
-
-
-
-{\bf Exercice 7:}
-
-
-On s'int\'eresse \`a la r\'epartition des sexes des enfants d'une famille de
-$n$ enfants. On prend comme mod\'elisation
-$$ \Omega_n=\{{\tt f},{\tt g}\}^n=\{\,(x_1,\ldots,x_n),\; 
-x_i\in\{{\tt f},{\tt g}\}, i=1,\dots,n\},
-$$
-muni de l'\'equiprobabilit\'e. On consid\`ere les \'ev\`enements:
-$$
-A=\{\mbox{la famille a des enfants des deux sexes}\}\quad
-B=\{\mbox{la famille a au plus une fille}\}.
-$$
-
-1)
- Montrer que pour $n\geq 2$, $P(A)=(2^n-2)/2^n$ et $P(B)=(n+1)/2^n$.
- 
-2)
- En d\'eduire que $A$ et $B$ ne sont ind\'ependants que si $n=3$.\\
-
-{\bf Exercice  8:}
-
-On effectue des lancers r\'ep\'et\'es d'une paire de d\'es discernables et on observe pour
-chaque lancer la \emph{somme} des points indiqu\'es par les deux d\'es. On se
-propose de calculer de deux fa\c{c}ons la probabilit\'e de l'\'ev\'enement $E$ d\'efini
-ainsi: \emph{dans la suite des r\'esultats observ\'es, la premi\`ere obtention d'un
-$9$ a lieu avant la premi\`ere obtention d'un $7$.}
-
-1)
- Quelle
-est la probabilit\'e de n'obtenir ni $7$ ni $9$ au cours d'un lancer? 
-
-2)
-\emph{Premi\`ere m\'ethode:}  
-On note $F_i=\{$\emph{obtention d'un $9$ au $i$-\`eme lancer}$\}$
- et
-pour $n>1$,  
-$E_n=\{$ \emph{ni $7$ ni $9$ ne sont obtenus au cours
-des $n-1$ premiers lancers et le $n$-i\`eme lancer donne $9$}$\}$. Dans le
-cas particulier $n=1$, on pose $E_1=F_1$. 
-\begin{itemize}
-\item[a)]
-Exprimer $E$ \`a l'aide d'op\'erations
-ensemblistes sur les $E_n$ ($n\geq 1$). Exprimer de m\^eme chaque $E_n$ \`a
-l'aide  des $F_i$ et des  $H_i=\{$ \emph{ni $7$ ni $9$ au $i$-\`eme
-lancer}$\}$. 
-\item[b)]
- Calculer $P(E_n)$ en utilisant l'ind\'ependance des lancers.
-\item[c)]
- Calculer $P(E)$.
-\end{itemize}
-
-3)
-\emph{Deuxi\`eme m\'ethode:}  On note 
-$G_1=\{$ \emph{obtention d'un $7$ au premier lancer}$\}$. 
-\begin{itemize}
-\item[a)]
-Donner une
-expression de $P(E)$ en utilisant le conditionnement par la partition
-$\{F_1,G_1,H_1\}$. 
-\item[b)]
- Donner sans calcul les valeurs de $P(E\mid F_1)$, $P(E\mid G_1)$ et
-expliquer pourquoi $P(E\mid H_1)=P(E)$.
-\item[c)] 
-En d\'eduire la valeur de $P(E)$.
-\end{itemize}
-
+\end{exo}
 
 \end{document}
 

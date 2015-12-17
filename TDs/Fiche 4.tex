@@ -1,153 +1,118 @@
-\documentclass[a4paper,10.5pt,french]{article}
-\usepackage[T1]{fontenc}
-\usepackage[ansinew]{inputenc}
-\usepackage{babel}
-\usepackage[T1]{fontenc}
-\usepackage[ansinew]{inputenc}
-\usepackage{babel,amsmath,amssymb}
-\newcommand{\K}{\rm I\!K}
-\newcommand{\N}{\rm I\!N}
-\newcommand{\Z}{\mathbf {Z}}
-\newcommand{\Q}{\mathbf {Q}}
-\newcommand{\R}{\rm I\!R}
-\newcommand{\C}{\mathbf {C}}
-\newcommand{\D}{\mathcal {D}}
-\newcommand{\NN}{\mathcal {N}}
-\newcommand{\1}{\ensuremath{\mbox{\rm 1\kern-0.23em I}}}
+\documentclass[a4paper,12pt,reqno]{amsart}
+\usepackage{macros_M43}
 
-\addtolength{\oddsidemargin}{-2cm}
-\addtolength{\evensidemargin}{-2cm}
-\addtolength{\textwidth}{4cm}
-\addtolength{\topmargin}{-2cm}
-\addtolength{\textheight}{4cm}
 \begin{document}
 
-\begin{flushleft}
-
-{\bf Universit\'e des Sciences et Technologies de Lille}, 
-{\bf UFR de Mathématiques Pures et Appliquées},
-{Ann\'ee 2014-2015}
- \end{flushleft} 
-  {\bf Licence MIMP S4}, Module: Probabilités discrètes\\
- 
- \hrule
- \vspace{1cm}
- 
-\hskip 4cm {\large Fiche 4: Vecteurs aléatoires réels }\\
+% ===================================================================
+\hautdepage{Fiche 4: Vecteurs alÃ©atoires rÃ©els}
+% ===================================================================
 
 
+%-----------------------------------
+\begin{exo}
 
-{\bf Exercice 1:} 
+  Les variables alÃ©atoires $X$ et $Y$ sont telles que:
+    $$
+      \begin{array}{ccc}
+                                   & P(X=0 \text{ et } Y=1)=1/5 & P(X=0 \text{ et } Y=2)=1/5 \\
+        P(X=1 \text{ et } Y=0)=1/5 & P(X=1 \text{ et } Y=1)=1/5 & P(X=1 \text{ et } Y=2)=1/5
+      \end{array}
+    $$
+  \begin{enumerate}
+    \item Trouver la loi et la fonction de rÃ©partition de $X$.
+    \item Trouver la loi et la fonction de rÃ©partition de $Y$.
+    \item Les v.a. $X$ et $Y$ sont-elles indÃ©pendantes?
+    \item Trouver la loi et la fonction de rÃ©partition de $Z = X-Y$.
+  \end{enumerate}
 
-Les variables aléatoires $X$ et $Y$ sont telles que~:
-$$
-\begin{array}{ccc}
-& P(X=0 \text{ et } Y=1)=1/5 & P(X=0 \text{ et } Y=2)=1/5 \\
-P(X=1 \text{ et } Y=0)=1/5 & P(X=1 \text{ et } Y=1)=1/5 & P(X=1 \text{ et } Y=2)=1/5
-\end{array}
-$$
+\end{exo}
 
-1) Trouver la loi et la fonction de répartition de $X$.
+%-----------------------------------
+\begin{exo}
 
-2) Trouver la loi et la fonction de répartition de $Y$.
+  La loi du couple $(U,V)$ est de la forme:
+    $$
+      P(U=j,V=k)=C\frac{k}{j!(60-j)!} \quad\text{ pour } k\in\{1,2,\ldots,59\} \text{ et } j\in\{0,1,\ldots,60\}
+    $$
+  \begin{enumerate}
+    \item Pour connaitre vraiment la loi du couple, il faut connaitre la constante rÃ©elle $C$ dont on ne nous a pas donnÃ© la valeur. Calculer $C$.
+    \item Calculer la loi de $U$ (et donner son nom si elle en a un).
+    \item Calculer la loi de $V$ (et donner son nom si elle en a un).
+    \item $U$ et $V$ sont-elles indÃ©pendantes?
+  \end{enumerate}
 
-3) Les v.a. $X$ et $Y$ sont-elles indépendantes?
+\end{exo}
 
-4) Trouver la loi et la fonction de répartition de $Z = X-Y$.\\
+%-----------------------------------
+\begin{exo}
 
-{\bf Exercice 2:}
+  On suppose que le couple de variables alÃ©atoires discrÃ¨tes $(X,Y)$ a
+  une loi donnÃ©e par:
+    $$
+      \forall (i,j)\in\N^{2},\quad P(X=i, Y=j)=\frac{\alpha}{(1+i+j)!},
+    $$
+  oÃ¹ $\alpha$ est une constante strictement positive qui sera prÃ©cisÃ©e ultÃ©rieurement.
+  \begin{enumerate}
+    \item Expliquer sans  calcul pourquoi les marginales $X$ et $Y$ ont mÃªme loi.
+    \item On pose $S=X+Y$. Montrer que:
+      $$
+        \forall k\in\N,\quad P(S=k)=\frac{\alpha}{k!}.
+      $$
+    \item En dÃ©duire la valeur de $\alpha$ et reconnaÃ®tre la loi de $S$.
+    \item Calculer $P(X=0)$. Les variables alÃ©atoires $X$ et $Y$ sont-elles indÃ©pendantes?
+    \item Calculer $P(X=Y)$ et en dÃ©duire sans calcul $P(X>Y)$.
+  \end{enumerate}
 
-La loi du couple $(U,V)$ est de la forme~:
-$$
-P(U=j,V=k)=C\frac{k}{j!(60-j)!} \quad\text{ pour } k\in\{1,2,\ldots,59\} \text{ et } j\in\{0,1,\ldots,60\}
-$$ 
+\end{exo}
 
-1) Pour connaitre vraiment la loi du couple, il faut connaitre la constante réelle $C$ dont on ne nous a pas donné la valeur.
-Calculer $C$.
+%-----------------------------------
+\begin{exo}
 
-2) Calculer la loi de $U$ (et donner son nom si elle en a un).
+  Soient $T$ et $U$  deux variables alÃ©atoires indÃ©pendantes de loi gÃ©omÃ©triques de paramÃ¨tres $\alpha$ et $\beta$ (avec $\alpha$ et $\beta$ fixÃ©s dans $]0,1[$).
+  \begin{enumerate}
+    \item Calculer la loi de leur somme $T+U$, dans le cas oÃ¹ $\alpha\neq\beta$, puis dans le cas oÃ¹ $\alpha=\beta$.
+    \item En dÃ©duire que quand $\alpha=\beta$, $T+U$ est la loi du second succÃ¨s dans une suite d'Ã©preuves indÃ©pendantes oÃ¹ la probabilitÃ© de succÃ¨s vaut $\alpha$.
+  \end{enumerate}
 
-3) Calculer la loi de $V$ (et donner son nom si elle en a un).
+\end{exo}
 
-4) $U$ et $V$ sont-elles indépendantes~?\\
+%-----------------------------------
+\begin{exo}
 
+  Soient $X$ et $Y$ deux variables indÃ©pendantes de lois  binomiales de paramÃ¨tres $(n_1,p)$ et $(n_2,p)$.
+  \begin{enumerate}
+    \item DÃ©terminer par le calcul la loi de $X+Y$.
+    \item Retrouver ce rÃ©sultat sans faire de calculs. Une interprÃ©tation de la loi binomiale suffira.
+  \end{enumerate}
 
+\end{exo}
 
+%-----------------------------------
+\begin{exo}
 
+  Lors d'un congrÃ©s Ã  Grenoble, $n$ chercheurs se rÃ©partissent de faÃ§on alÃ©atoire et indÃ©pendamment les unes des autres  dans les $r$ hotels, $H_1,\ldots,H_r$, de la ville. On dÃ©signe par $X_i$ le nombre de personnes qui vont dans le hotel $H_i$ et $p_i$ la probabilitÃ© qu'un chercheur aille dans l'hotel $H_i$ tel que $\sum_{i=1}^rp_i=1$ pour $i\in\{1,\ldots,r\}$.
+  \begin{enumerate}
+    \item Soit $i\in\{1,\ldots,r\}$. Quelle est la loi de $X_i$ ?
+    \item DÃ©terminer  $P(X_1=n_1,\ldots,X_r=n_r)$ pour tout $n$-uplets $(n_1,\ldots,n_r)$ tel que $n_1+\ldots +n_n=n$.
+    \item Les variables $X_i$ sont-elles deux Ã  deux indÃ©pendantes ?
+  \end{enumerate}
 
-{\bf Exercice 3:} 
+\end{exo}
 
-On suppose que le couple de variables al\'eatoires discr\`etes $(X,Y)$ a 
-une loi donn\'ee par:
-$$ 
-\forall (i,j)\in\N^{2},\quad
-P(X=i, Y=j)=\frac{\alpha}{(1+i+j)!},
-$$
-o\`u $\alpha$ est une constante strictement positive qui sera pr\'ecis\'ee 
-ult\'erieurement.
+%-----------------------------------
+\begin{exo}
 
-1) Expliquer sans  calcul pourquoi les marginales $X$ et $Y$ ont m\^eme loi.
+  Pour les besoins mÃ©dicaux (en particulier les transfusions), on classe le sang humain en quatre groupes: groupe O, groupe A, groupe B et groupe AB. Mais le sang prÃ©sente aussi un Â« facteur rhÃ©sus Â», qui peut Ãªtre positif ou nÃ©gatif. Il y a donc huit\footnote{Il y a en rÃ©alitÃ© beaucoup plus de catÃ©gories, basÃ©es sur une trentaine de caractÃ©ristiques du sang. Mais les deux caractÃ©ristiques ci-dessus (ABO et rhÃ©sus) sont les plus importantes pour assurer la compatibilitÃ© des transfusions. Et ces deux caractÃ©ristiques ne dÃ©terminent que huit catÃ©gories.} catÃ©gories de sang (O positif, O nÃ©gatif, A positif, A nÃ©gatif, etc).
 
-2) On pose $S=X+Y$. Montrer que:
-$$ \forall k\in\N,\quad P(S=k)=\frac{\alpha}{k!}. $$
-
-3) En d\'eduire la valeur de $\alpha$ et reconna\^{\i}tre la loi de $S$.
-
-4) Calculer $P(X=0)$. Les variables al\'eatoires $X$ et $Y$ sont-elles 
-ind\'ependantes?
-
-5) Calculer $P(X=Y)$ et en d\'eduire sans calcul $P(X>Y)$. \\
-
-
-
-
-{\bf Exercice 4:} 
-
-Soient $T$ et $U$  deux variables aléatoires indépendantes de loi géométriques de paramètres $\alpha$ et $\beta$ (avec $\alpha$ et $\beta$ fixés dans $]0,1[$).
-
-1) Calculer la loi de leur somme $T+U$, dans le cas o\`u $\alpha\neq\beta$, puis dans le cas o\`u $\alpha=\beta$.
-
-2) En déduire que quand $\alpha=\beta$, $T+U$ est la loi du second succès dans une suite d'épreuves indépendantes où la probabilité de succès vaut $\alpha$. \\
-
-
-{\bf Exercice 5:}
-
-Soient $X$ et $Y$ deux variables indépendantes de lois  binomiales de paramètres $(n_1,p)$ et $(n_2,p)$.
-
-1) Déterminer par le calcul la loi de $X+Y$.
-
-2) Retrouver ce résultat sans faire de calculs. Une interprétation de la loi binomiale suffira.\\
-
-\newpage 
-
-{\bf Exercice 6:}
-
-Lors d'un congrés à Grenoble, $n$ chercheurs se r\'epartissent de
-fa\c{c}on al\'{e}atoire et indépendamment les unes des autres  dans les $r$ hotels, $H_1,\ldots,H_r$, de la ville. On d\'esigne par $X_i$ le nombre de personnes qui vont dans le hotel $H_i$ et $p_i$ la probabilité qu'un chercheur aille dans l'hotel $H_i$ tel que $\sum_{i=1}^rp_i=1$ pour $i\in\{1,\ldots,r\}$.
-
-1) Soit $i\in\{1,\ldots,r\}$. Quelle est la loi de $X_i$ ?
-
-2) D\'eterminer  $P(X_1=n_1,\ldots,X_r=n_r)$ pour tout $n$-uplets
-$(n_1,\ldots,n_r)$ tel que $n_1+\ldots +n_n=n$.
-
-3) Les variables $X_i$ sont-elles deux \`a deux ind\'ependantes ?\\
-
-
-{\bf Exercice 7:}
-
-Pour les besoins médicaux (en particulier les transfusions), on classe le sang humain en quatre groupes~: groupe O, groupe A, groupe B et groupe AB.
-Mais le sang présente aussi un "facteur rhésus", qui peut être positif ou négatif. Il y a donc huit\footnote{Il y a en réalité beaucoup plus de catégories, basées sur une trentaine de caractéristiques du sang. Mais les deux caractéristiques ci-dessus (ABO et rhésus) sont les plus importantes pour assurer la compatibilité des transfusions. Et ces deux caractéristiques ne déterminent que huit catégories.} catégories de sang (O positif, O négatif, A positif, A négatif, etc). 
-
-En France, une personne choisie au hasard a 43\% de chances d'être du groupe O, 45\% de chances d'être du groupe A, 9\% de chances d'être du groupe B, et 3\% de chances d'être du groupe AB.
-Parmi les personnes du groupe O, 14\% sont de rhésus négatif. La proportion de rhésus négatif est de 13\% parmi les personnes du groupe A. Elle est de 22\% parmi les gens de groupe sanguin B, et de 33\% parmi les personnes du groupe AB.
-
-1) Quelle est la probabilité qu'une personne prise au hasard soit de rhésus positif~? % 2 pts
-
-2) Si l'on sait qu'une personne est de rhésus négatif, quelle est la probabilité qu'elle soit du groupe AB~?% 1 pt
-
-3) Dans un groupe de TD de 24 étudiants, on note $N_O$, $N_A$, $N_B$ et $N_{AB}$ les nombres respectifs d'étudiants ayant le groupe sanguin O, A, B et AB. Quelle est la loi du vecteur aléatoire  $(N_O,N_A,N_B,N_{AB})$~? Indiquer aussi les quatre lois des variables aléatoires $N_O$, $N_A$, $N_B$ et $N_{AB}$. 
-
-4) Quelle est la loi du couple aléatoire $(N_O+N_A,N_B+N_{AB})$~?
+  En France, une personne choisie au hasard a $43\%$ de chances d'Ãªtre du groupe O, $45\%$ de chances d'Ãªtre du groupe A, $9\%$ de chances d'Ãªtre du groupe B, et $3\%$ de chances d'Ãªtre du groupe AB.
+  Parmi les personnes du groupe O, $14\%$ sont de rhÃ©sus nÃ©gatif. La proportion de rhÃ©sus nÃ©gatif est de $13\%$ parmi les personnes du groupe A. Elle est de $22\%$ parmi les gens de groupe sanguin B, et de $33\%$ parmi les personnes du groupe AB.
+  \begin{enumerate}
+    \item Quelle est la probabilitÃ© qu'une personne prise au hasard soit de rhÃ©sus positif?
+    \item Si l'on sait qu'une personne est de rhÃ©sus nÃ©gatif, quelle est la probabilitÃ© qu'elle soit du groupe AB?
+    \item Dans un groupe de TD de 24 Ã©tudiants, on note $N_O$, $N_A$, $N_B$ et $N_{AB}$ les nombres respectifs d'Ã©tudiants ayant le groupe sanguin O, A, B et AB. Quelle est la loi du vecteur alÃ©atoire  $(N_O,N_A,N_B,N_{AB})$? Indiquer aussi les quatre lois des variables alÃ©atoires $N_O$, $N_A$, $N_B$ et $N_{AB}$.
+    \item Quelle est la loi du couple alÃ©atoire $(N_O+N_A,N_B+N_{AB})$?
+  \end{enumerate}
+\end{exo}
 
 \end{document}
 

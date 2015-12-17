@@ -1,198 +1,153 @@
-\documentclass[a4paper,10.5pt,french]{article}
-\usepackage[T1]{fontenc}
-\usepackage[ansinew]{inputenc}
-\usepackage[francais]{babel}
-\usepackage{babel,amsmath,amssymb}
-\newcommand{\K}{\rm I\!K}
-\newcommand{\N}{\rm I\!N}
-\newcommand{\Z}{\mathbf {Z}}
-\newcommand{\Q}{\mathbf {Q}}
-\newcommand{\R}{\rm I\!R}
-\newcommand{\C}{\mathbf {C}}
-\newcommand{\D}{\mathcal {D}}
-\newcommand{\NN}{\mathcal {N}}
-\newcommand{\1}{\ensuremath{\mbox{\rm 1\kern-0.23em I}}}
+\documentclass[a4paper,12pt,reqno]{amsart}
+\usepackage{macros_M43}
 
-\addtolength{\oddsidemargin}{-2cm}
-\addtolength{\evensidemargin}{-2cm}
-\addtolength{\textwidth}{4cm}
-\addtolength{\topmargin}{-2cm}
-\addtolength{\textheight}{4cm}
 \begin{document}
 
-\begin{flushleft}
-
-{\bf Universit\'e des Sciences et Technologies de Lille} 
-{\bf UFR de Math�matiques Pures et Appliqu�es},
-{Ann\'ee 2014-2015}
- \end{flushleft} 
-  {\bf Licence MIMP S4}, Module: Probabilit�s discr�tes\\
- 
- \hrule
- \vspace{1cm}
- 
-\hskip 4cm {\large Fiche 1: Espaces probabilis�s }\\
+% ===================================================================
+\hautdepage{Fiche 1: Espaces probabilisés}
+% ===================================================================
 
 
+%-----------------------------------
+\begin{exo}
 
-{\bf Exercice 1:} 
+  Trois enfants lancent chacun un ballon en direction d'un panier de basket. Il est convenu que celui qui marquera gagnera un paquet de bonbons, et qu'en cas d'ex-æquo les vainqueurs se partageront le paquet. Si personne ne réussit son panier, chacun mangera le tiers des bonbons. En utilisant les événements:
+  \begin{eqnarray*}
+    A & = & \{\text{Arthur marque un panier}\},\\
+    B & = & \{\text{Béatrice marque un panier}\},\\
+    C & = & \{\text{Cécile marque un panier}\}.
+  \end{eqnarray*}
+  écrire de façon ensembliste les événements suivants:
+  \begin{eqnarray*}
+    D & = & \{\text{tous les trois réussissent à marquer}\},\\
+    E & = & \{\text{aucun ne réussit à marquer}\},\\
+    F & = & \{\text{Béatrice mange tous les bonbons}\},\\
+    G & = & \{\text{les trois enfants mangent des bonbons}\},\\
+    H & = & \{\text{Cécile mange au moins un bonbon}\},\\
+    I & = & \{\text{Arthur ne reçoit aucun bonbon}\}.
+  \end{eqnarray*}
+  Parmi tous ces événements, lesquels sont des événements élémentaires?
 
-
-Trois enfants lancent chacun un ballon en direction d'un panier de basket.
-Il est convenu que celui qui marquera gagnera un paquet de bonbons, et 
-qu'en cas d'ex-\ae quo les vainqueurs se partageront le paquet.
-Si personne ne r\'eussit son panier, chacun mangera le tiers des bonbons. 
-En utilisant les \'ev\'enements:
-\begin{eqnarray*}
-A & = & \{\textrm{Arthur marque un panier}\},\\
-B & = & \{\textrm{B\'eatrice marque un panier}\},\\
-C & = & \{\textrm{C\'ecile marque un panier}\}.
-\end{eqnarray*}
-\'ecrire de fa\c con ensembliste les \'ev\'enements suivants:
-\begin{eqnarray*}
-D & = & \{\textrm{tous les trois r\'eussissent \`a marquer}\},\\
-E & = & \{\textrm{aucun ne r\'eussit \`a marquer}\},\\
-F & = & \{\textrm{B\'eatrice mange tous les bonbons}\},\\
-G & = & \{\textrm{les trois enfants mangent des bonbons}\},\\
-H & = & \{\textrm{C\'ecile mange au moins un bonbon}\},\\
-I & = & \{\textrm{Arthur ne re\c coit aucun bonbon}\}.
-\end{eqnarray*}
-Parmi tous ces \'ev\'enements, lesquels sont des \'ev\'enements \'el\'ementaires~?\\
+\end{exo}
 
 
-{\bf Exercice 2:}
+%-----------------------------------
+\begin{exo}
 
- On  lance un d\'e jusqu'\`a la premi\`ere
-apparition du six. Notons:
-$$ S_i=\{\textrm{Le $i$-\`eme lancer donne un six}\},\qquad i\in\N.$$
-Ecrire \`a l'aide des \'ev\'enements $S_i$ et $S_i^c$ l'\'ev\'enement
-$$ A=\{\textrm{La premi\`ere apparition du six a lieu \emph{apr\`es} le 5-\`eme
-lancer}\}.$$
-Est-ce le m\^eme \'ev\'enement que 
-$$
-B=\{\textrm{Six n'appara\^{\i}t pas au cours des 5 premiers lancers}\}?$$
+  On  lance un dé jusqu'à la première apparition du six. Notons:
+    $$
+      S_i=\{\text{Le $i$-ème lancer donne un six}\},\qquad i\in\N.
+    $$
+  Écrire à l'aide des événements $S_i$ et $S_i^c$ l'événement
+    $$
+      A=\{\text{La première apparition du six a lieu \emph{après} le 5-ème lancer}\}.
+    $$
+  Est-ce le même événement que
+    $$
+      B=\{\text{Six n'apparaît pas au cours des 5 premiers lancers}\}?
+    $$
 
-
-
-
-{\bf Exercice 3:} 
-
-Soit $n\in \N^*$. On tire \`{a} pile ou face $n$ fois.
-
-1) 
-Donner une repr\'esentation  de l'espace $\Omega$ des \'ev\'enements
-\'el\'ementaires de cette exp\'erience. 
-
-2) 
-Ecrire l'\'{e}v\'{e}nement $F=$``pile n'a pas \'{e}t\'{e} obtenu lors 
-des 2 premiers lancers'' comme sous-ensemble de $\Omega$.
-
-3)
-Soit $i\in \{1,\ldots,n\}$. 
-D\'{e}crire les \'{e}l\'{e}ments de l'\'{e}v\'{e}nement $E_i=$ 
-``le r\'{e}sultat du $i$-i\`{e}me lancer est pile''.
-
-4) 
-Ecrire \`{a} l'aide des \'{e}v\'{e}nements $E_i$ l'\'{e}v\'{e}nement $F$.
-
-5) 
-Ecrire \`{a} l'aide des \'{e}v\'{e}nements $E_i$ l'\'{e}v\'{e}nement 
-$G=$`` la pi\`{e}ce est tomb\'{e}e au moins une fois sur pile''.
-
-6) 
-Ecrire \`{a} l'aide des ensembles $E_i$ l'\'{e}v\'{e}nement 
-$H=$`` la pi\`{e}ce est tomb\'{e}e au moins deux fois sur pile''.\\
+\end{exo}
 
 
+%-----------------------------------
+\begin{exo}
 
-{\bf Exercice 4:} 
+    Soit $n\in \N^*$. On tire à pile ou face $n$ fois.
 
+    \begin{enumerate}
+      \item Donner une représentation  de l'espace $\Omega$ des événements
+      élémentaires de cette expérience.
 
-On tire, une \`a une, sans les remettre dans le paquet, cinq cartes dans un jeu de 32 cartes; 
-chaque succession de cartes  ainsi tir\'ees s'appelle une main.
+      \item Écrire l'événement $F=$\{pile n'a pas été obtenu lors
+      des 2 premiers lancers\} comme sous-ensemble de $\Omega$.
 
-1) Quel est l'espace de probabilit� que vous consid�rez ?
+      \item Soit $i\in \{1,\ldots,n\}$.
+      Décrire les éléments de l'événement $E_i=$
+      \{le résultat du $i$-ième lancer est pile\}.
 
-2) Quelle est la probabilit� qu'une main  contienne :
-\begin{itemize}
-\item[a)] que des cartes d'une m\^eme couleur ?
-\item[b)] exactement trois rois? au plus un roi? au moins un roi ou
-un as?
-\end{itemize}
+      \item Écrire à l'aide des événements $E_i$ l'événement $F$.
 
-3) M\^emes questions si le tirage se fait avec remise.\\
+      \item Écrire à l'aide des événements $E_i$ l'événement
+      $G=$\{la pièce est tombée au moins une fois sur pile\}.
 
+      \item Écrire à l'aide des ensembles $E_i$ l'événement
+      $H=$\{la pièce est tombée au moins deux fois sur pile\}.
+    \end{enumerate}
 
-{\bf Exercice 5:}
-
- On rel\`eve les dates d'anniversaire dans un groupe de $30$
-personnes (jours num\'erot\'es de $1$ \`a $365$). 
-On suppose que les jours de naissance sont \'equiprobables. 
-Quelle est la probabilit\'e que deux personnes au moins aient le
-m\^eme anniversaire?\\
-
-
-{\bf Exercice  6:}
+\end{exo}
 
 
-1)
-En d\'enombrant les fa\c{c}ons de tirer $n$ boules parmis $n$ boules blanches et $n$ boules
-noires, montrer que:
-$$ C_{2n}^n=\sum_{k=0}^n (C_n^k)^2.$$
+%-----------------------------------
+\begin{exo}
 
-2) Retrouver cette formule \`a partir de l'identit\'e $(1+t)^n(1+t)^n=(1+t)^{2n}$.
-
-3) Deux personnes lancent chacune $n$ fois une pi\`ece de monnaie. Quelle
-est la probabilit\'e
-$p_n$ qu'elles obtiennent le m\^eme nombre de piles? 
-{\em Indication:} On utilisera l'\'equiprobabilit\'e sur
-l'espace $\Omega=\{{\tt f}, {\tt p}\}^{2n}$.
-
-4) 
-Donner un \'equivalent de $p_n$ quand $n$ tend vers $+\infty$.
-{\em Indication:} On rappelle la formule de Stirling:
-$$ n!=\sqrt{2\pi}n^{n+1/2}\exp{-n}(1+\epsilon_n),\quad\textrm{avec}\quad
-\lim_{n\to +\infty}
-\epsilon_n=0.$$
-
-5) Que pensez vous de l'affirmation suivante: \emph{ Lorsqu'on jette un
-grand nombre
-(pair) de fois une pi\`ece \'equilibr\'ee, il y a une forte probabilit\'e d'obtenir
-exactement
-autant de piles que de faces} ?\\
+  On tire, une à une, sans les remettre dans le paquet, cinq cartes dans un jeu de 32 cartes; chaque succession de cartes  ainsi tirées s'appelle une main.
+  \begin{enumerate}
+    \item Quel est l'espace de probabilité que vous considérez ?
+    \item Quelle est la probabilité qu'une main  contienne :
+    \begin{enumerate}
+      \item que des cartes d'une même couleur ?
+      \item exactement trois rois? au plus un roi? au moins un roi ou un as?
+    \end{enumerate}
+    \item Mêmes questions si le tirage se fait avec remise.
+  \end{enumerate}
+\end{exo}
 
 
-{\bf Exercice  7:}
+%-----------------------------------
+\begin{exo}
+
+  On relève les dates d'anniversaire dans un groupe de $30$ personnes (jours numérotés de $1$ à $365$). On suppose que les jours de naissance sont équiprobables. Quelle est la probabilité que deux personnes au moins aient le même anniversaire?
+
+\end{exo}
 
 
-Une secr\'etaire un peu distraite a tap\'e $ N $ lettres et pr\'epar\'e
-$ N $ enveloppes portant les adresses des destinataires, mais elle
-r\'epartit au hasard les lettres dans les enveloppes. 
-Pour mod\'eliser cette situation, on choisit comme espace probabilis\'e
-$ \Omega_N $ ensemble de toutes les permutations sur $ \{ 1,\ldots,N \} $
-muni de l'\'equiprobabilit\'e $ P_N $.
-Pour $ 1 \le j \le N $, on note $ A_j $ l'\'ev\'enement 
-{\em la $ j$-\`eme lettre se trouve dans la bonne enveloppe}.
+%-----------------------------------
+\begin{exo}
 
-1)
-Calculer $ P_N(A_j) $.
+  \begin{enumerate}
+    \item En dénombrant les façons de tirer $n$ boules parmi $n$ boules blanches et $n$ boules noires, montrer que:
+      $$
+        C_{2n}^n=\sum_{k=0}^n (C_n^k)^2.
+      $$
 
-2)
-On fixe $ k $ entiers $ i_1 < i_2 < \cdots < i_k $ entre $ 1 $ et $ N $.
-D\'enombrer toutes les permutations $ \sigma $ sur $ \{1,\ldots,N\} $
-telles que $ \sigma(i_1)=i_1 $, $ \sigma(i_2)=i_2 $, \ldots, $ \sigma(i_k)=i_k $.
-En d\'eduire $ P_N(  A_{i_1} \cap A_{i_2} \cap \cdots \cap A_{i_k} ) $.
+    \item Retrouver cette formule à partir de l'identité $(1+t)^n(1+t)^n=(1+t)^{2n}$.
+    \item Deux personnes lancent chacune $n$ fois une pièce de monnaie. Quelle est la probabilité $p_n$ qu'elles obtiennent le même nombre de piles?
 
-3)
-On note $ B $ l'\'ev\'enement 
-{\em au moins une des lettres est dans la bonne enveloppe}.
-Exprimer $ B $ \`a l'aide des $ A_j $.
+    \begin{indication}
+      On utilisera l'équiprobabilité sur l'espace $\Omega=\{{\tt f}, {\tt p}\}^{2n}$.
+    \end{indication}
 
-4)
-Utiliser la formule de Poincar\'e pour calculer $ P_N(B) $
-et sa limite quand $ N $ tend vers l'infini.
+    \item Donner un équivalent de $p_n$ quand $n$ tend vers $+\infty$.
+
+    \begin{indication}
+      On rappelle la formule de Stirling:
+        $$
+          n!=\sqrt{2\pi n}\Big(\frac{n}{e}\Big)^{n}(1+\varepsilon_n),\quad\text{avec}\quad \lim_{n\to +\infty} \varepsilon_n=0.
+        $$
+    \end{indication}\hspace{-\baselineskip}
+
+    \item Que pensez vous de l'affirmation suivante: \emph{Lorsqu'on jette un grand nombre (pair) de fois une pièce équilibrée, il y a une forte probabilité d'obtenir exactement autant de piles que de faces} ?
+  \end{enumerate}
+
+\end{exo}
 
 
+%-----------------------------------
+\begin{exo}
+
+  Une secrétaire un peu distraite a tapé $ N $ lettres et préparé $ N $ enveloppes portant les adresses des destinataires, mais elle répartit au hasard les lettres dans les enveloppes. Pour modéliser cette situation, on choisit comme espace probabilisé $ \Omega_N $ ensemble de toutes les permutations sur $ \{ 1,\ldots,N \} $ muni de l'équiprobabilité $ P_N $. Pour $ 1 \le j \le N $, on note $ A_j $ l'événement \emph{la $ j$-ème lettre se trouve dans la bonne enveloppe}.
+  \begin{enumerate}
+    \item Calculer $ P_N(A_j) $.
+
+    \item On fixe $ k $ entiers $ i_1 < i_2 < \cdots < i_k $ entre $ 1 $ et $ N $. Dénombrer toutes les permutations $ \sigma $ sur $ \{1,\ldots,N\} $ telles que $ \sigma(i_1)=i_1 $, $ \sigma(i_2)=i_2 $, \ldots, $ \sigma(i_k)=i_k $. En déduire $ P_N(  A_{i_1} \cap A_{i_2} \cap \cdots \cap A_{i_k} ) $.
+
+    \item On note $ B $ l'événement \emph{au moins une des lettres est dans la bonne enveloppe}. Exprimer $ B $ à l'aide des $ A_j $.
+
+    \item Utiliser la formule de Poincaré pour calculer $ P_N(B) $ et sa limite quand $ N $ tend vers l'infini.
+  \end{enumerate}
+
+\end{exo}
 
 \end{document}
 
