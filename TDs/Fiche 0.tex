@@ -1,0 +1,98 @@
+\documentclass[a4paper,12pt,reqno]{amsart}
+\usepackage{macros_M43}
+
+\begin{document}
+
+% ===================================================================
+\hautdepage{Fiche 0: Dénombrabilité}
+% ===================================================================
+
+
+%-----------------------------------
+\begin{exo} %(Fraction et série)
+
+  Soit une suite géométrique $(a_{n})_{n \in \N}$ de raison $q$.
+  \begin{enumerate}
+    \item Rappeler et démontrer la formule qui permet de calculer la somme partielle d'une série géométrique
+      \[
+        S_{n}=a_{0}+a_{1}+a_{2}+\cdots+a_{n}.
+      \]
+
+    \item Pour quelles valeurs des paramètres $a_{0}$ et $q$ la série géométrique $S = \sum_{i=0}^{\infty} a_{i}$ converge ? Justifier votre réponse.
+
+    \item Donner la formule du reste $R_{n} = \sum_{i=n+1}^{\infty} a_{i}$ d'une série géométrique convergente. Sous quelle condition $R_{n} \leq a_{n}$ ?
+  \end{enumerate}
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo} %(Fraction et série)
+
+  Trouvez une suite $(x_i)_{i \in \N^*}$ d'entiers appartenant chacun à $\ldbrack 0,9 \rdbrack$ et telle que
+    \[
+      \frac{19}{44}=\sum_{i=1}^{+\infty}\frac{x_i}{10^i}.
+    \]
+  Justifiez votre réponse par un calcul de somme de série.
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo} %(La taille d'une famille d'événements observables)
+
+  \emph{En probabilités, on énumère assez souvent les issues élémentaires possibles d'une expérience, mais on dresse rarement la liste de tous les événements observables. Le but de cet exercice est de comprendre pourquoi.}
+
+  \begin{enumerate}
+
+    \item Etant donnée un ensemble $\Omega$ soit $\mathcal{P}(\Omega)$ l'ensemble des parties de $\Omega$. Si l'ensemble $\Omega$ a $n$ éléments, combien l'ensemble $\mathcal{P}(\Omega)$ a-t-il d'éléments?
+
+    \item On réalise une expérience simple: un tirage dans une urne contenant 3 jetons numérotés 1,2 et 3.  Donner l'ensemble $\Omega$ des issues possibles de cette expérience et l'ensemble $\mathcal{P}(\Omega)$ correspondant, qui représente la famille des événements observables.
+
+    \item On réalise une expérience un peu moins simple: le lancer de deux dés de couleurs différentes.  Quel est le cardinal de $\Omega$?  Si on utilise un ordinateur pour décrire tous les événements observables et si chacun occupe 5 octets (pourquoi ?), quel espace mémoire l'ensemble des observables occupera-t-il en tout?  Calculer la hauteur de la pile de CD-ROMs nécessaire (épaisseur: 1,2\,mm, contenance: 800 mégaoctets\footnote{Rappelons que un mégaoctet vaut $10^{6} \approx 2^{20}$ octets.}).
+  \end{enumerate}
+\end{exo}
+
+%-----------------------------------
+\begin{exo} %(Cardinalité)
+
+  Montrer que l'ensemble des nombres irrationnels  n'est pas dénombrable.
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo} %(Dénombrabilité d'ensembles classiques)
+
+\begin{enumerate}
+  \item Montrer que l'ensemble $\mathbb{D}$ des nombres décimaux (c'est-à-dire de la forme $k\times 10^{-n} $, $k\in\Z$, $n\in\N$) est dénombrable.
+
+  \item Les ensembles suivants sont-ils dénombrables ?
+  \begin{enumerate}
+    \item l'ensemble des polynômes à coefficients entiers;
+    \item l'ensemble des nombres algébriques (un nombre réel ou complexe est dit \emph{algébrique} s'il est racine d'un polynôme à coefficients entiers).
+  \end{enumerate}
+\end{enumerate}
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo} %(Dénombrabilité : familles d'ouverts)
+
+  Montrez que toute famille d'intervalles ouverts de $\R$ non vides et
+  deux à deux disjoints est au plus dénombrable.
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo} %(Points de discontinuité d'une fonction monotone)
+
+  Montrer que l'ensemble des points de discontinuité d'une fonction monotone $f$ est au plus dénombrable.
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo}  %(Dénombrabilité : droites)
+
+  Existe-t-il des droites du plan $\R^2$ qui ne contiennent pas au moins deux points à coordonnées rationnelles ?
+
+\end{exo}
+
+\end{document}

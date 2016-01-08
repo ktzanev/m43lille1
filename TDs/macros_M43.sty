@@ -1,4 +1,9 @@
 \ProvidesPackage{macros_M43}
+
+% ---------------------
+%       Bibliothèques
+% ---------------------
+
 % ------------- encodage
 \usepackage{iftex}
 \ifPDFTeX % PDFLaTeX
@@ -8,7 +13,8 @@
   \usepackage{lmodern}
 \else % LuaLaTeX & XeLaTeX
   \usepackage{fontspec}
-\fi% ------------- Page
+\fi
+% ------------- format de la page
 \usepackage[top=21mm,left=23mm,right=21mm,nohead]{geometry}
 % pour espacer un peut le texte
 \parskip=1mm
@@ -20,9 +26,11 @@
 \setlength{\belowdisplayshortskip}{2pt plus 4pt}
 % ------------- Les standards
 \usepackage{mathtools,amssymb,bm,amsthm}
+\usepackage{mathabx} % pour les doubles crochets d'intervalles d'entiers et \leq français
+% ------------- Pour le français
 \usepackage[french]{babel}
-\usepackage[babel=true]{csquotes}
-\frenchspacing
+%\usepackage[babel=true]{csquotes}
+%\frenchspacing
 % ------------- Pour ajuster les enumerate
 \usepackage[shortlabels]{enumitem}
 % compatibilite enumitem - franch babel (d'après la doc de 28 septembre 2014, p.14)
@@ -39,27 +47,19 @@
         leftmargin=!}
 % mon changement perso
 \setlist{leftmargin=7mm}
-% ------------- TikZ pour les dessins
-\usepackage{tikz}
-\usetikzlibrary{calc,through,intersections,arrows,shapes.symbols,shapes.arrows,backgrounds,decorations.pathreplacing,decorations.pathmorphing,decorations.markings,svg.path}
-% ------------- Pour prevenir les coupures des pages au mauvaise endroits
+% ------------- Pour prévenir les coupures des pages au mauvaise endroits
 \usepackage{needspace}
-% ------------- Pour des questions sur plusieurs colones
-\usepackage{multicol}
+% ------------- pour des dessins (en particulier pour \exoimg)
+\usepackage{tikz}
 
+% ---------------------
 %       Macros
 % ---------------------
 
-% sections
-\renewcommand{\section}[1]{\needspace{11\baselineskip}\vspace{4mm}\hfill
-            \tikz{\draw (0,0) node[align=center, text width=11cm, black,rounded corners,fill=black!1, draw=black,inner sep=2.1mm]{\textsf{\large #1}};}
-            \hfill\vspace{3mm}}
-
 % Les exercices
+\def\exoimg{\tikz[overlay]{\NoAutoSpacing;\draw[red, opacity=0.7] (-0.1,0.4) -- (-0.1,-2.1) (-0.4,-0.1) -- (2.1,-0.1);}}
 \newcounter{numeroexo}
 \setcounter{numeroexo}{0}
-\def\exoimg{\tikz[overlay]{\NoAutoSpacing;\draw[red, opacity=0.7] (-0.1,0.4) -- (-0.1,-2.1) (-0.4,-0.1) -- (2.1,-0.1);}}
-
 \newlength{\afterexo}\setlength{\afterexo}{3mm plus 4mm}
 \newenvironment{exercice}[1]
    {\needspace{4\baselineskip}\vspace{1mm}\par\refstepcounter{numeroexo}\hspace*{-1mm}\noindent{\exoimg\bfseries\sffamily #1 \arabic{numeroexo}}}
@@ -73,53 +73,17 @@
 \renewcommand{\theenumii}{\roman{enumii}}
 \renewcommand{\labelenumii}{(\theenumii)}
 
-\newenvironment{questions}{\begin{enumerate}}{\end{enumerate}}
-\newenvironment{examples}{\begin{enumerate}}{\end{enumerate}}
-\newenvironment{examplescol}[1]
-    {\vspace{-4mm}\begin{multicols}{#1}\begin{enumerate}}
-    {\end{enumerate}\end{multicols}}
-
-% exo difficile
-\newcommand{\hard}{\hspace{-2.1mm}\raisebox{.7ex}{${}^{\star}$}\hspace{.7mm}}
-
-% convention
-\newcommand{\unindentlist}{\advance\leftskip-4cm}
-\newenvironment{convention}{\vspace{-.7\parskip}\par\noindent\em\ignorespaces}{\vspace{.3\parskip}}
-
 % indication
 \newenvironment{indication}{\noindent\em Indication:}{}
 
-%  -------------- Les abréviations standards
-\newcommand{\K}{\rm I\!K}
-\newcommand{\N}{\rm I\!N}
-\newcommand{\Z}{\mathbf {Z}}
-\newcommand{\Q}{\mathbf {Q}}
-\newcommand{\R}{\rm I\!R}
-\newcommand{\C}{\mathbf {C}}
-\newcommand{\D}{\mathcal {D}}
-\newcommand{\NN}{\mathcal {N}}
+% les abréviations standards
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
 \newcommand{\1}{\ensuremath{\mbox{\rm 1\kern-0.23em I}}}
 
-% -------------- Pour les figures
-\usepackage{graphicx}
-\usepackage{wrapfig}
-%---- wrap figures ----
-%
-% example d'utilisation : \image{r}{5cm}{-7mm}{-21mm}{ballon_rugby.tikz}
-% #1 : r ou l (pour right ou left)
-% #2 : la largeur
-% #3 : l'espace avant
-% #4 : l'espace après
-% #5 : le nom du fichier à inclure
-\newcommand {\image}[5] {
-    \begin{wrapfigure}{#1}{#2}
-        \begin{center}
-            \vspace{#3}
-            \input{#5}
-            \vspace{#4}
-        \end{center}
-    \end{wrapfigure}
-}
+% pas de numéros des pages
+\pagestyle{empty}
 
 % ---- haut de la page ------
 \newcommand{\hautdepage}[1]{
@@ -136,5 +100,3 @@
 \rule[0.5ex]{\textwidth}{0.1mm}
 }
 
-% ---- pas de numéros des pages ------
-\pagestyle{empty}
