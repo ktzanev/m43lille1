@@ -17,3 +17,5 @@ Dans le répértoire TDs vous pouvez trouvez les sources LaTeX et les PDFs (comp
 - Fiche 4 [[tex](https://raw.githubusercontent.com/ktzanev/m43lille1/master/TDs/Fiche%204.tex)] [[pdf](https://raw.githubusercontent.com/ktzanev/m43lille1/master/TDs/Fiche%204.pdf)]
 - Fiche 5 [[tex](https://raw.githubusercontent.com/ktzanev/m43lille1/master/TDs/Fiche%205.tex)] [[pdf](https://raw.githubusercontent.com/ktzanev/m43lille1/master/TDs/Fiche%205.pdf)]
 
+Pour compiler ces feuilles de td vous avez besoin de la feuille de style [macros_M43.sty](https://raw.githubusercontent.com/ktzanev/m43lille1/master/TDs/macros_M43.sty).
+
