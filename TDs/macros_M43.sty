@@ -69,10 +69,11 @@
 \newenvironment{exo}{\setcounter{equation}{0}\begin{exercice}{Exercice} \normalfont}{\end{exercice}}
 
 % les questions
-\renewcommand{\theenumi}{\alph{enumi}}
-\renewcommand{\labelenumi}{\bf\theenumi)}
-\renewcommand{\theenumii}{\roman{enumii}}
-\renewcommand{\labelenumii}{(\theenumii)}
+\renewcommand{\theenumi}{\alph{enumi})}
+\renewcommand{\labelenumi}{\bf\theenumi}
+\renewcommand{\theenumii}{(\roman{enumii})}
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\p@enumii}{} % pour qu'il ne rajoute rien devant (i) si \ref
 
 % indication
 \newenvironment{indication}{\noindent\em Indication:}{}
