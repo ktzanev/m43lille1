@@ -11,17 +11,16 @@
 %-----------------------------------
 \begin{exo}
 
-  Soient $X$ et $Y$ deux variables aléatoires discrètes indépendantes et de même loi uniforme sur $\iintv{1,N}$, où $N\ge 2$ est un entier fixé. On définit les variables aléatoires $\min(X,Y)$ et $\max(X,Y)$ par
-  \[
+  Soient $X$ et $Y$ deux variables aléatoires discrètes indépendantes et de même loi uniforme sur $\iintv{1,N}$, où $N\ge 2$ est un entier fixé. On définit les variables aléatoires $\min(X,Y)$ et $\max(X,Y)$ par:
+  $
     \forall \omega\in\Omega, \quad
     \max(X,Y)(\omega)= \max\big(X(\omega),Y(\omega)\big),\quad
     \min(X,Y)(\omega)= \min\big(X(\omega),Y(\omega)\big).
-  \]
-
+  $
   \begin{enumerate}
     \item Expliquer pourquoi $\max(X,Y)\neq X$ et $\max(X,Y)\neq Y$.
     \item Montrer que le vecteur aléatoire $(X,Y)$ suit la loi uniforme sur $\iintv{1,N}^2$, c'est-à dire que tous les éléments de cet ensemble \emph{fini} ont la même probabilité d'être atteints par le vecteur aléatoire $(X,Y)$.
-    \item Montrer que le vecteur aléatoire $\big(\min(X,Y),\,\max(X,Y)\,\big)$ suit une loi uniforme dont on déterminera le \emph{support} (c'est-à-dire l'ensemble des couples atteints avec une probabilité non nulle par ce vecteur aléatoire).
+    \item Déterminer la loi du vecteur aléatoire $\big(\min(X,Y),\,\max(X,Y)\,\big)$.
     \item Les variables aléatoires $\min(X,Y)$ et $\max(X,Y)$ sont-elles indépendantes ?
   \end{enumerate}
 
@@ -76,31 +75,31 @@
 %-----------------------------------
 \begin{exo}
 
-  Dans tout cet exercice, le vecteur aléatoire discret $(X,Y)$ a pour support $S$ l'ensemble des six points représentés sur la figure ci-dessous.
-  \begin{center}
-    \begin{tikzpicture}[outer sep=4pt]
+  \begin{minipage}{.77\linewidth}
+  Dans tout cet exercice, le vecteur aléatoire discret $(X,Y)$ a pour support $S$ l'ensemble des six points représentés sur la figure ci-contre.
+  La loi de $(X,Y)$ est donc donnée par les $P\big((X,Y)=(i,j)\big)$, pour $(i,j)\in S$.
+  \end{minipage}%
+  \begin{minipage}{.21\linewidth}
+    \hfill
+    \begin{tikzpicture}[outer sep=4pt,scale=.49]
       \draw[help lines] (-.1,-.1) grid (4.1,4.1);
       \foreach ~ in {0,...,4}{
-        \node[below] at (~,0) {~};
-        \node[left] at (0,~) {~};
+        \node[below,scale=.7] at (~,0) {~};
+        \node[left,scale=.7] at (0,~) {~};
       }
-      \foreach \x/\y in {0/0,1/1,2/2,2/3,3/2,3/3}{
-        \fill (\x,\y) circle(3pt);
-        \fill[red] (\x,\y) circle(1.5pt);
-      }
+      \foreach \x/\y in {0/0,1/1,2/2,2/3,3/2,3/3}
+        \filldraw[fill=red, line width=1pt] (\x,\y) circle(4pt);
     \end{tikzpicture}
-  \end{center}
-  La loi de $(X,Y)$ est donc donnée par les $P\big((X,Y)=(i,j)\big)$, pour $(i,j)\in S$.
-
-  \begin{enumerate}
-    \item Quelles probabilités faut-il attribuer aux différents points de $S$ pour satisfaire simultanément aux deux conditions suivantes~:
+  \end{minipage}
     \begin{enumerate}
-      \item\label{conda} les points de $\iintv{2,3}^2$ ont tous même probabilité,
-      \item\label{condb} $X$ et $Y$ suivent la loi uniforme sur $\iintv{0,3}$ ?
+      \item Quelles probabilités faut-il attribuer aux différents points de $S$ pour satisfaire simultanément aux deux conditions suivantes~:
+      \begin{enumerate}
+        \item\label{conda} les points de $\iintv{2,3}^2$ ont tous même probabilité,
+        \item\label{condb} $X$ et $Y$ suivent la loi uniforme sur $\iintv{0,3}$ ?
+      \end{enumerate}
+      \item Lorsque $(X,Y)$ suit la loi déterminée à la question précédente, $X$ et $Y$ sont-elles indépendantes ? On peut répondre sans calcul.
+      \item Montrer qu'il existe une infinité de lois de $(X,Y)$ avec support $S$ telles que \ref{condb} soit vérifiée et $X$ et $Y$ non indépendantes.
     \end{enumerate}
-    \item Lorsque $(X,Y)$ suit la loi déterminée à la question précédente, $X$ et $Y$ sont-elles indépendantes ? On peut répondre sans calcul.
-    \item Montrer qu'il existe une infinité de lois de $(X,Y)$ avec support $S$ telles que \ref{condb} soit vérifiée et $X$ et $Y$ non indépendantes.
-  \end{enumerate}
 
 \end{exo}
 
