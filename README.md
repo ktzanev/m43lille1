@@ -2,10 +2,10 @@
 
 Les feuilles de TD du module M43 - Probabilités discrètes de l'Université Lille 1
 
-Vous pouvez récupérer l'intégralité de ce dépôt de deux façons faciles :
+Vous pouvez récupérer ce dépôt de deux façons faciles :
 
-- en téléchargeant l'archive [zip](https://github.com/ktzanev/m43lille1/archive/master.zip),
-- en utilisant `git` avec la commande
+- en téléchargeant l'archive [zip](https://github.com/ktzanev/m43lille1/archive/master.zip) qui contient la dernière version des fichiers,
+- récupérer l'intégralité de ce dépôt, y compris l'historique des modifications, en utilisant `git` avec la commande
 
   ~~~~~~~
   git clone git@github.com:ktzanev/m43lille1.git
@@ -34,3 +34,13 @@ Pour compiler ces feuilles de td vous avez besoin de la feuille de style [macros
 - Feuille n°5 (non utilisée) [[tex](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD5.tex)] [[pdf](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD5.pdf)]
 
 Pour compiler ces feuilles de td vous avez besoin de la feuille de style [macros_M43.sty](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/macros_M43.sty).
+
+Pour récupérer tous les fichiers de 2015/16 :
+
+- vous pouvez télécharger l'archive [zip](https://github.com/ktzanev/m43lille1/archive/v2015-16.zip) qui contient la version 2015/16 des fichiers,
+- ou si vous avez récupéré l'intégralité du dépôt git (comme indiqué plus haut), vous pouvez « revenir » à la version 2015/16 avec la commande
+
+  ~~~~~~~
+  git checkout v2015-16
+  ~~~~~~~
+
