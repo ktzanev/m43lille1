@@ -98,18 +98,19 @@
 \begin{exo}
 
   On s'intéresse à la répartition des sexes des enfants d'une famille de
-  $n$ enfants. On prend comme modélisation
+  $n$ enfants, avec $n\geq 2$. On prend comme modélisation
     $$
       \Omega_n=\{{\tt f},{\tt g}\}^n=\{\,(x_1,\ldots,x_n),\; x_i\in\{{\tt f},{\tt g}\}, i=1,\dots,n\},
     $$
   muni de l'équiprobabilité. On considère les événements:
     $$
-      A=\{\text{la famille a des enfants des deux sexes}\}\quad
+      A=\{\text{la famille a des enfants des deux sexes}\}
+        \quad\text{et}\quad
       B=\{\text{la famille a au plus une fille}\}.
     $$
 
   \begin{enumerate}
-    \item  Montrer que pour $n\geq 2$, $P(A)=(2^n-2)/2^n$ et $P(B)=(n+1)/2^n$.
+    \item  Montrer que $P(A)=(2^n-2)/2^n$ et $P(B)=(n+1)/2^n$.
     \item  En déduire que $A$ et $B$ ne sont indépendants que si $n=3$.
   \end{enumerate}
 
@@ -126,16 +127,16 @@
 
   \begin{enumerate}
     \item  Quelle est la probabilité de n'obtenir ni $7$ ni $9$ au cours d'un lancer?
-    \item \emph{Première méthode:} On note $F_i=\{$\emph{obtention d'un $9$ au $i$-ième lancer\,}$\}$ et pour $n>1$, $E_n=\{$\emph{ni $7$ ni $9$ ne sont obtenus au cours des $n-1$ premiers lancers et le $n$-ième lancer donne $9$\,}$\}$. Dans le cas particulier $n=1$, on pose $E_1=F_1$.
+    \item \underline{\emph{Première méthode:}} On note $N_i=\{$\emph{obtention d'un $9$ au $i$-ième lancer\,}$\}$ et pour $n>1$, $E_n=\{$\emph{ni $7$ ni $9$ ne sont obtenus au cours des $n-1$ premiers lancers et le $n$-ième lancer donne $9$\,}$\}$. Dans le cas particulier $n=1$, on pose $E_1=N_1$.
       \begin{enumerate}
-        \item Exprimer $E$ à l'aide d'opérations ensemblistes sur les $E_n$ ($n\geq 1$). Exprimer de même chaque $E_n$ à l'aide  des $F_i$ et des  $H_i=\{$\emph{ni $7$ ni $9$ au $i$-ième lancer\,}$\}$.
+        \item Exprimer $E$ à l'aide d'opérations ensemblistes sur les $E_n$ ($n\geq 1$). Exprimer de même chaque $E_n$ à l'aide  des $N_i$ et des  $A_i=\{$\emph{autre que $7$ et $9$ au $i$-ième lancer\,}$\}$.
         \item Calculer $P(E_n)$ en utilisant l'indépendance des lancers.
         \item Calculer $P(E)$.
       \end{enumerate}
-    \item \emph{Deuxième méthode:}  On note $G_1=\{$\emph{obtention d'un $7$ au premier lancer\,}$\}$.
+    \item \underline{\emph{Deuxième méthode:}}  On note $S_1=\{$\emph{obtention d'un $7$ au premier lancer\,}$\}$.
       \begin{enumerate}
-        \item Donner une expression de $P(E)$ en utilisant le conditionnement par la partition $\{F_1,G_1,H_1\}$.
-        \item Donner sans calcul les valeurs de $P_{F_1}(E)$, $P_{G_1}(E)$ et expliquer pourquoi $P_{H_1}(E)=P(E)$.
+        \item Donner une expression de $P(E)$ en utilisant le conditionnement par la partition $\{N_1,S_1,A_1\}$.
+        \item Donner sans calcul les valeurs de $P_{N_1}(E)$, $P_{S_1}(E)$ et expliquer pourquoi $P_{A_1}(E)=P(E)$.
         \item En déduire la valeur de $P(E)$.
       \end{enumerate}
   \end{enumerate}
