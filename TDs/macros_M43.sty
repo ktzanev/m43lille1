@@ -15,7 +15,7 @@
   \usepackage{fontspec}
 \fi
 % ------------- format de la page
-\usepackage[top=21mm,left=23mm,right=21mm,nohead]{geometry}
+\usepackage[top=21mm,left=23mm,right=21mm,bottom=21mm,nohead]{geometry}
 % pour espacer un peut le texte
 \parskip=1mm
 \parindent=0mm
@@ -50,6 +50,9 @@
 \setlist{leftmargin=7mm}
 % ------------- Pour prévenir les coupures des pages au mauvaise endroits
 \usepackage{needspace}
+%\widowpenalty10000
+%\clubpenalty10000
+\usepackage[all]{nowidow}
 % ------------- pour des dessins (en particulier pour \exoimg)
 \usepackage{tikz}
 

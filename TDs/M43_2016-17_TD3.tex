@@ -19,11 +19,11 @@
 %-----------------------------------
 \begin{exo}
 
-  Une urne contient $N$ jetons numérotés de 1 à $N$. On en tire $n\leq N$ au hasard et sans remise. Soit $k\in \{1,\ldots,N\}$.
+  Une urne contient $N$ jetons numérotés de 1 à $N$. On en tire $m\leq N$ au hasard et sans remise. Soit $k\in \{1,\ldots,N\}$.
 
   \begin{enumerate}
     \item Décrire  un espace de probabilité $(\Omega,\mathcal{P}(\Omega),P)$  associé à l'expérience aléatoire.
-    \item Quelle est la probabilité que les jetons tirés aient tous des numéros inférieurs ou égaux à $k$?
+    \item Quelle est la probabilité que les jetons tirés aient tous des numéros inférieurs ou égaux à~$k$?
     \item On désigne par $X$ la variable égale au plus grand numéro des jetons tirés. Déterminer la loi de $X$.
     \item Mêmes questions avec un tirage avec remise.
   \end{enumerate}
@@ -36,8 +36,28 @@
   On lance ensemble 5 dés. On met de coté ceux qui ont donné l'as, puis on relance les autres, et ainsi de suite jusqu'à ce que tous les dés aient amené l'as. Le jeu s'arrête au bout de $ X $ lancers.
 
   \begin{enumerate}
-    \item Les dés sont numérotés, et pour $ i $ allant de $ 1 $ à $ 5 $ on note $ X_i $ le nombre de fois où le dé $ i $ a été lancé. Quelle est la loi de $ X_i $? Donner sa fonction de répartition $ F_i $.
-    \item Exprimer $ X $ en fonction des $ X_i $ et déterminer sa loi (il est conseillé d'exprimer la fonction de répartition $ F $ de $ X $ en fonction des $ F_i $).
+    \item Les dés sont numérotés, et pour $ i $ allant de $ 1 $ à $ 5 $ on note $ X_i $ le nombre de fois où le dé $ i $ a été lancé. Quelle est la loi de $ X_i $? Donner sa \emph{fonction de répartition} $ F_i $, définie par $F_i(k)=P(X_{i}\leq k)$.
+    \item Exprimer $ X $ en fonction des $ X_i $ et déterminer sa loi.
+
+    \begin{indication}
+      Exprimer la fonction de répartition $ F $ de $ X $ en fonction des $ F_i $.
+    \end{indication}
+  \end{enumerate}
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo}
+
+  \begin{enumerate}
+    \item Quelle est la probabilité d'obtenir un double lorsqu'on lance une fois une paire de dés?
+    \item On lance de façon répétée une paire de dés jusqu'à la première obtention d'un double. Soit $X$ la variable aléatoire égale au nombre de lancers ainsi réalisés. Donner, en justifiant votre réponse, les valeurs de $P(X=1)$, $P(X=2)$ et plus généralement $P(X=k)$ où $k\geq 1$ est un entier quelconque. Comment s'appelle la loi de $X$?
+    \item Soit $n\geq 1$ un nombre entier. Calculer \emph{directement} la probabilité de n'obtenir aucun double lors des $n$ premiers lancers. En déduire $P(X>n)$.
+    \item Pour $k>n$, vérifier que
+      $$
+        P_{X>n}(X=k)=P(X=k-n).
+      $$
+    Donner une interprétation.
   \end{enumerate}
 
 \end{exo}
@@ -73,10 +93,13 @@
 \begin{exo}
 
   Soit $X$ une v.a. de Poisson de paramètre $\lambda>0$. On définit la v.a. $Y$ de la manière suivante:
-  \begin{enumerate}
-    \item si $X$ prend une valeur nulle ou impaire alors $Y$ prend la valeur $0$,
-    \item si $X$ prend une valeur paire alors $Y$ prend la valeur $X/2$.
-  \end{enumerate}
+  $$
+    Y =
+      \begin{dcases*}
+        0           & si $X$ prend une valeur nulle ou impaire,\\
+        \frac{X}{2} & si $X$ prend une valeur paire.
+      \end{dcases*}
+  $$
   Trouver la loi de $Y$.
 
 \end{exo}
@@ -106,21 +129,7 @@
   \end{enumerate}
 
 \end{exo}
-%-----------------------------------
-\begin{exo}
 
-  \begin{enumerate}
-    \item Quelle est la probabilité d'obtenir un double lorsqu'on lance une fois une paire de dés?
-    \item On lance de façon répétée une paire de dés jusqu'à la première obtention d'un double. Soit $X$ la variable aléatoire égale au nombre de lancers ainsi réalisés. Donner, en justifiant votre réponse, les valeurs de $P(X=1)$, $P(X=2)$ et plus généralement $P(X=k)$ où $k\geq 1$ est un entier quelconque. Comment s'appelle la loi de $X$?
-    \item Soit $n\geq 1$ un nombre entier. Calculer \emph{directement} la probabilité de n'obtenir aucun double lors des $n$ premiers lancers. En déduire $P(X>n)$.
-    \item Pour $k>n$, vérifier que
-      $$
-        P_{X>n}(X=k)=P(X=k-n).
-      $$
-    Donner une interprétation.
-  \end{enumerate}
-
-\end{exo}
 %-----------------------------------
 \begin{exo}
 
@@ -140,10 +149,13 @@
     On appelle $ V $ le nombre de cravates à rayures contenues dans la valise? \\
     Application numérique: Calculer $ P(V=1) $.
     \item Monsieur Zzzz possède aussi 10 chemises dont 3 sont bleues. Il prend 5 chemises au hasard et les met dans sa valise. \\
-    On appelle $ Y $ le nombre de chemises bleues contenues dans la valise? \\
+    %\nopagebreak
+    On appelle $ Y $ le nombre de chemises bleues contenues dans la valise?\\
     Application numérique: Calculer $ P(Y=1) $.\\
   \end{enumerate}
+
 \end{exo}
+
 %-----------------------------------
 \begin{exo}
 
@@ -152,7 +164,9 @@
       \item On utilise un procédé de fabrication qui assure que les pixels sont indépendants et que chacun n'a qu'une probabilité $ 9.10^{-7} $ d'être inutilisable. Quelle est la loi du nombre $ X $ de pixels grillés sur l'écran?
       \item L'écran est invendable si trois pixels au moins sont grillés. Calculer (en justifiant!) une valeur approchée de la probabilité pour un écran d'être invendable.
   \end{enumerate}
+
 \end{exo}
+
 %-----------------------------------
 \begin{exo}
 
@@ -165,5 +179,6 @@
   \end{enumerate}
 
 \end{exo}
+
 \end{document}
 
