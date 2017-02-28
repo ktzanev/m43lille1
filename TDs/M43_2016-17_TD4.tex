@@ -46,8 +46,7 @@
 %-----------------------------------
 \begin{exo}
 
-  On suppose que le couple de variables aléatoires discrètes $(X,Y)$ a
-  une loi donnée par:
+  On suppose que le couple de variables aléatoires discrètes $(X,Y)$ a une loi donnée par:
     $$
       \forall (i,j)\in\N^{2},\quad P(X=i, Y=j)=\frac{\alpha}{(1+i+j)!},
     $$
@@ -105,8 +104,7 @@
 
   Pour les besoins médicaux (en particulier les transfusions), on classe le sang humain en quatre groupes: groupe O, groupe A, groupe B et groupe AB. Mais le sang présente aussi un « facteur rhésus », qui peut être positif ou négatif. Il y a donc huit\footnote{Il y a en réalité beaucoup plus de catégories, basées sur une trentaine de caractéristiques du sang. Mais les deux caractéristiques ci-dessus (ABO et rhésus) sont les plus importantes pour assurer la compatibilité des transfusions. Et ces deux caractéristiques ne déterminent que huit catégories.} catégories de sang (O positif, O négatif, A positif, A négatif, etc).
 
-  En France, une personne choisie au hasard a $43\%$ de chances d'être du groupe O, $45\%$ de chances d'être du groupe A, $9\%$ de chances d'être du groupe B, et $3\%$ de chances d'être du groupe AB.
-  Parmi les personnes du groupe O, $14\%$ sont de rhésus négatif. La proportion de rhésus négatif est de $13\%$ parmi les personnes du groupe A. Elle est de $22\%$ parmi les gens de groupe sanguin B, et de $33\%$ parmi les personnes du groupe AB.
+  En France, une personne choisie au hasard a $43\%$ de chances d'être du groupe O, $45\%$ de chances d'être du groupe A, $9\%$ de chances d'être du groupe B, et $3\%$ de chances d'être du groupe AB. Parmi les personnes du groupe O, $14\%$ sont de rhésus négatif. La proportion de rhésus négatif est de $13\%$ parmi les personnes du groupe A. Elle est de $22\%$ parmi les gens de groupe sanguin B, et de $33\%$ parmi les personnes du groupe AB.
   \begin{enumerate}
     \item Quelle est la probabilité qu'une personne prise au hasard soit de rhésus positif?
     \item Si l'on sait qu'une personne est de rhésus négatif, quelle est la probabilité qu'elle soit du groupe AB?
@@ -114,6 +112,55 @@
     \item Quelle est la loi du couple aléatoire $(N_O+N_A,N_B+N_{AB})$?
   \end{enumerate}
 \end{exo}
+
+%-----------------------------------
+\begin{exo}
+
+  Soient $X$ et $Y$ deux variables aléatoires discrètes indépendantes et de même loi uniforme sur $\iintv{1,N}$, où $N\ge 2$ est un entier fixé. On définit les variables aléatoires $\min(X,Y)$ et $\max(X,Y)$ par:
+  $
+    \forall \omega\in\Omega, \quad
+    \max(X,Y)(\omega)= \max\big(X(\omega),Y(\omega)\big),\quad
+    \min(X,Y)(\omega)= \min\big(X(\omega),Y(\omega)\big).
+  $
+  \begin{enumerate}
+    \item Expliquer pourquoi $\max(X,Y)\neq X$ et $\max(X,Y)\neq Y$.
+    \item Montrer que le vecteur aléatoire $(X,Y)$ suit la loi uniforme sur $\iintv{1,N}^2$, c'est-à dire que tous les éléments de cet ensemble \emph{fini} ont la même probabilité d'être atteints par le vecteur aléatoire $(X,Y)$.
+    \item Déterminer la loi du vecteur aléatoire $\big(\min(X,Y),\,\max(X,Y)\,\big)$.
+    \item Les variables aléatoires $\min(X,Y)$ et $\max(X,Y)$ sont-elles indépendantes ?
+  \end{enumerate}
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo}
+
+  \begin{minipage}{.77\linewidth}
+  Dans tout cet exercice, le vecteur aléatoire discret $(X,Y)$ a pour support $S$ l'ensemble des six points représentés sur la figure ci-contre. La loi de $(X,Y)$ est donc donnée par les $P\big((X,Y)=(i,j)\big)$, pour $(i,j)\in S$.
+  \end{minipage}%
+  \begin{minipage}{.21\linewidth}
+    \hfill
+    \begin{tikzpicture}[outer sep=4pt,scale=.49]
+      \draw[help lines] (-.1,-.1) grid (4.1,4.1);
+      \foreach ~ in {0,...,4}{
+        \node[below,scale=.7] at (~,0) {~};
+        \node[left,scale=.7] at (0,~) {~};
+      }
+      \foreach \x/\y in {0/0,1/1,2/2,2/3,3/2,3/3}
+        \filldraw[fill=red, line width=1pt] (\x,\y) circle(4pt);
+    \end{tikzpicture}
+  \end{minipage}
+    \begin{enumerate}
+      \item Quelles probabilités faut-il attribuer aux différents points de $S$ pour satisfaire simultanément aux deux conditions suivantes~:
+      \begin{enumerate}
+        \item\label{conda} les points de $\iintv{2,3}^2$ ont tous même probabilité,
+        \item\label{condb} $X$ et $Y$ suivent la loi uniforme sur $\iintv{0,3}$ ?
+      \end{enumerate}
+      \item Lorsque $(X,Y)$ suit la loi déterminée à la question précédente, $X$ et $Y$ sont-elles indépendantes ? On peut répondre sans calcul.
+      \item Montrer qu'il existe une infinité de lois de $(X,Y)$ avec support $S$ telles que \ref{condb} soit vérifiée et $X$ et $Y$ non indépendantes.
+    \end{enumerate}
+
+\end{exo}
+
 
 \end{document}
 
