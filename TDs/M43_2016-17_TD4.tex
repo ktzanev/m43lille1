@@ -19,10 +19,10 @@
       \end{array}
     $$
   \begin{enumerate}
-    \item Trouver la loi et la fonction de répartition de $X$.
-    \item Trouver la loi et la fonction de répartition de $Y$.
-    \item Les v.a. $X$ et $Y$ sont-elles indépendantes?
-    \item Trouver la loi et la fonction de répartition de $Z = X-Y$.
+    \item Déterminer la loi de $X$.
+    \item Déterminer la loi de $Y$.
+    \item Les variables aléatoires $X$ et $Y$ sont-elles indépendantes?
+    \item Trouver la loi de $Z = X-Y$.
   \end{enumerate}
 
 \end{exo}
@@ -72,6 +72,7 @@
   \begin{enumerate}
     \item Calculer la loi de leur somme $T+U$, dans le cas où $\alpha\neq\beta$, puis dans le cas où $\alpha=\beta$.
     \item En déduire que quand $\alpha=\beta$, $T+U$ est la loi du second succès dans une suite d'épreuves indépendantes où la probabilité de succès vaut $\alpha$.
+    \item Dans le cas $\alpha=\beta$, calculer $P(T \neq U)$.
   \end{enumerate}
 
 \end{exo}
@@ -90,7 +91,7 @@
 %-----------------------------------
 \begin{exo}
 
-  Lors d'un congrès à Grenoble, $n$ chercheurs se répartissent de façon aléatoire et indépendamment les uns des autres dans les $r$ hôtels, $H_1,\ldots,H_r$, de la ville. On désigne par $X_i$ le nombre de personnes qui vont dans l'hôtel $H_i$, et $p_i$ la probabilité qu'un chercheur aille dans l'hôtel $H_i$, de sorte que $\sum_{i=1}^rp_i=1$ pour $i\in\{1,\ldots,r\}$.
+  Lors d'un congrès à Grenoble, $n$ chercheurs se répartissent de façon aléatoire et indépendamment les uns des autres dans les $r > 1$ hôtels, $H_1,\ldots,H_r$, de la ville. On désigne par $p_i \in\, ]0,1[$ la probabilité qu'un chercheur aille dans l'hôtel $H_i$, de sorte que $\sum_{i=1}^rp_i=1$ pour $i\in\{1,\ldots,r\}$, et par $X_i$ le nombre de personnes qui vont dans l'hôtel $H_i$.
   \begin{enumerate}
     \item Soit $i\in\{1,\ldots,r\}$. Quelle est la loi de $X_i$ ?
     \item Déterminer  $P(X_1=n_1,\ldots,X_r=n_r)$ pour tout $n$-uplets $(n_1,\ldots,n_r)$ tel que $n_1+\ldots +n_n=n$.
