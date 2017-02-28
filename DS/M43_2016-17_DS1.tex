@@ -1,0 +1,158 @@
+\documentclass[a4paper,12pt,reqno]{amsart}
+\usepackage{graphicx}
+\usepackage{macros_M43}
+
+% pour voir les solutions il faut enlever le commentaire de la ligne suivante
+% \solutionstrue
+
+\begin{document}
+
+% ==================================
+\hautdepage{
+
+\ifsolutions{Solutions de l'interrogation}\else{Interrogation}\fi\par\normalfont\normalsize
+10 mars 2017\\{[ durée: 2 heures ]}\par
+}
+% ==================================
+\ifsolutions\else
+% {\fontencoding{U}\fontfamily{futs}\selectfont\char 66\relax}
+\tikz[baseline={(0,0)}]{\NoAutoSpacing\node(e){!};\draw[red,ultra thick,line join=round,yshift=-.15ex](90:1em)--(210:1em)--(330:1em)--cycle;}
+\hfill\begin{minipage}[c]{.9\textwidth}
+\emph{%
+  Vous êtes autorisés à garder une feuille A4 manuscrite recto-verso.\\
+  Tout autre document est interdit. Les calculatrices sont interdites.
+}
+\end{minipage}
+\tsvp
+\vspace*{\fill}
+\fi
+
+
+%-----------------------------------
+\begin{exo}
+
+  Une boîte contient $8$ cubes : $1$ gros rouge et $3$ petits rouges, $2$ gros verts et $1$ petit vert, et enfin $1$ petit jaune.\\
+  Un enfant choisit au hasard et simultanément 3 cubes de la boîte (on suppose que la probabilité de tirer un cube donné est indépendante de sa taille et de sa couleur).
+  \begin{enumerate}
+     \item Proposer un espace de probabilité  permettant de modéliser cette expérience aléatoire.
+  \end{enumerate}
+  \textit{Dans la suite, on demande de donner  les résultats sous forme de fractions irréductibles.}
+  \begin{enumerate}[resume]
+    \item Calculer la probabilité de l'événement $A$ : « obtenir des cubes de 3 couleurs différentes ».
+    \item Calculer la probabilité de l'événement $B$ : « obtenir au plus un petit cube ».
+  \end{enumerate}
+
+\end{exo}
+
+\begin{solution}
+  \begin{enumerate}
+    \item On numérote de $1$ à $8$ les huit cubes : $1$ le gros rouge, $2$, $3$ et $4$ les petits rouges, $5$ et $6$ les gros verts, $7$ le petit vert et enfin $8$ le petit jaune. Soit $\mathcal{C}=\{1,2,\ldots,8\}$ l'ensemble des cubes. Ainsi on peut prendre $\Omega = \{P \in \mathcal{P}(\mathcal{C}) | \hash P = 3\}$, l'ensemble des parties à 3 élements de $\mathcal{C}$, avec la probabilité uniforme.
+    \item Nous avons $\hash \Omega = C^{3}_{8}=\frac{8.7.6}{1.2.3} = 56$ et donc la probabilité d'un événement élémentaire est de $\frac{1}{56}$. Pour avoir trois cubes des trois couleurs différentes, nous avons $4$ choix possibles pour le cube rouge, $3$ choix possibles pour le cube vert et un seul choix pour le cube jaune. Ainsi on constate qu'il y a $4 \times 3 \times 1 = 12$ événements élémentaires à $3$ couleurs différentes. Ainsi $P(A)=\frac{12}{56}=\frac{3}{14}$.
+    \item Dans le lot il y a $5$ petits et $3$ gros cubes. Le nombre d'événement élémentaires à $0$ petits et $3$ gros cubes est $C^{0}_{5} \times C^{3}_{3}=1$ (il y a qu'un seul choix possible de 3 gros cubes), et le nombre d'événements élémentaires à $1$ petit et $2$ gros cubes est $C^{1}_{5} \times C^{2}_{3} = 15$. Ainsi $P(B) = (1+15) \times \frac{1}{56} = \frac{2}{7}$.
+  \end{enumerate}
+
+\end{solution}
+
+%-----------------------------------
+\begin{exo}
+
+  Dans une colonie de vacances, on organise le jeu suivant. On a disposé le long d'un parcours $10$ balises portant une lettre de A à J. Un concurrent court le long du parcours : à chaque fois qu'il arrive à une balise, on lui tend trois enveloppes extérieurement identiques. L'une contient une étiquette portant le numéro $1$, une autre contient une étiquette portant le numéro $2$ et la dernière le numéro $3$. Il en choisit une au hasard et prend l'étiquette qui s'y trouve. S'il découvre un chiffre qu'il n'a pas encore, il le garde, sinon il le jette. Le concurrent a gagné dès qu'il a collecté les trois numéros $1$, $2$ et $3$.
+
+  \begin{enumerate}
+    \item Proposer un espace de probabilité permettant de modéliser cette expérience aléatoire.
+    \item Calculer la probabilité qu'au bout du parcours le concurrent n'ait collecté que l'étiquette~$1$.
+    \item Calculer la probabilité qu'au bout du parcours il ait collecté les étiquettes $1$ et $2$ seulement.
+    \item En déduire la probabilité qu'il perde.
+    \item Calculer la probabilité qu'il trouve l'étiquette $2$ avant l'étiquette $3$.
+    \item Calculer la probabilité qu'il gagne exactement à la balise E.
+  \end{enumerate}
+
+\end{exo}
+
+\begin{solution}
+  \begin{enumerate}
+    \item On peut supposer que les coureurs ne s'arrête pas après avoir « gagné » et qu'au final tous les concurrents obtiennent $10$ étiquettes portant les numéros $1$, $2$ ou $3$. Ainsi on peut choisir pour $\Omega = \{1,2,3\}^{10}$ avec l'équiprobabilité où chaque événement élémentaire (une suite ordonnée de $10$ étiquettes) ai une probabilité $\frac{1}{3^{10}}$.
+
+    Notons $E_{i}$ l'événement « le concurrent n'ait collecté que l'étiquette $i$ », et $E_{ij}$ l'événement « le concurrent n'ait collecté que des étiquettes $i$ ou $j$».
+
+    \item\label{1etiquette} $P(E_{1}) = \frac{1}{3^{10}}$ car c'est un évenement élémentaire.
+    \item $P(E_{12}) = \frac{2^{10}}{3^{10}}$ car il y a $2^{10}$ suites ordonnées à $10$ étiquettes composée que de $1$ et de $2$.
+    \item\label{perdre} D'après la formule de Poincaré $P(\text{«perdre»}) = P(E_{12})+P(E_{13})+P(E_{23})-P(E_{1})-P(E_{2})-P(E_{3})$. Comme dans la question précédente : $P(E_{13}) = P(E_{23}) =\frac{2^{10}}{3^{10}}$, et comme dans la question \ref{1etiquette} $P(E_{2}) = P(E_{3}) = \frac{1}{3^{10}}$, ainsi $P(\text{«perdre»}) = 3 \times \frac{2^{10}}{3^{10}} - 3 \times \frac{1}{3^{10}}= \frac{2^{10}-1}{3^{9}}$.
+    \item Comme la probabilité de trouver l'étiquette $2$ avant l'étiquette $3$ est la même que de trouver l'étiquette $3$ avant l'étiquette $2$ et que ces deux événements sont complémentaires, on peut conclure que cette probabilité est de $\frac{1}{2}$.
+    \item Le nombre de configurations contenant des étiquettes $1$ et $2$ dans les $4$ premières balises et l'étiquette $3$ dans la $5$\textsuperscript{e} est de $2^{4}-2$ (on enlève les deux configurations contenant que des $1$ ou que des $2$ dans les $4$ première balises). Et c'est le même nombre dans les deux autres cas où on gagne à la balise $E$ avec un $1$ ou avec un $2$. Ainsi la probabilité de gagner à la $5$\textsuperscript{e} balise est de $3 \times \frac{2^{4}-2}{3^{5}} = \frac{14}{81}$.
+  \end{enumerate}
+
+\end{solution}
+
+%-----------------------------------
+\begin{exo}
+
+  Dans une maternité, on sait que
+  \begin{itemize}
+    \item $10 \%$ des accouchements ont lieu avant terme,
+    \item $40 \%$ des accouchements avant terme présentent des complications,
+    \item $20 \%$ des accouchements à terme présentent des complications.
+  \end{itemize}
+  \begin{enumerate}
+    \item Quelle est la probabilité de l'événement « l'accouchement présente des complications » ?
+    \item On sait que Madame B. a eu un accouchement avec des complications. Quelle est la probabilité que son accouchement ait eu lieu avant terme ?\\
+    \emph{(On donnera la réponse sous forme d'une fraction irréductible.)}
+\end{enumerate}
+
+\end{exo}
+
+\begin{solution}
+  On note $AT$ l'événement « l'accouchement a lieu avant terme » et $C$ l'événement « l'accouchement a des complications ». Ainsi nous savons que $P(AT)=\frac{1}{10}$, $P_{AT}(C)=\frac{4}{10}$ et $P_{\overline{AT}}(C)=\frac{2}{10}$ et on peut en déduire aussi les probabilités complémentaires $P(\overline{AT})=\frac{9}{10}$, $P_{AT}(\overline{C})=\frac{6}{10}$ et $P_{\overline{AT}}(\overline{C})=\frac{8}{10}$.
+  \begin{enumerate}
+    \item $P(C) = P(C\cap AT) + P(C\cap \overline{AT})= P_{AT}(C).P(AT) + P_{\overline{AT}}(C).P(\overline{AT}) = \frac{4}{10}\frac{1}{10} + \frac{2}{10}\frac{9}{10} = \frac{22}{100}$.
+    \item $P_{C}(AT) = \frac{P(C \cap AT)}{P(C)} = \frac{P_{AT}(C).P(AT)}{P(C)} = \frac{4/100}{22/100} = \frac{2}{11}$.
+  \end{enumerate}
+
+\end{solution}
+
+%-----------------------------------
+\begin{exo}
+
+  On dispose de $3$ dés à $6$ faces. Le dé $A$ porte sur ses faces les numéros $4,4,4,4,0,0$ ($4$ faces portent un $4$ et $2$ faces un $0$); le dé $B$ porte le numéro $3$ sur toutes ses faces et le dé $C$ portent les numéros $6,6,2,2,2,2.$ On lance les trois dés et on note $\{A>B\}$ l'événement « le résultat du dé $A$ est supérieur au résultat du dé B ».
+  \begin{enumerate}
+    \item Déterminer la probabilité de l'événement $\{A>B\}$.
+  \end{enumerate}
+  Si la probabilité de l'événement  $\{A>B\}$ est strictement supérieure  à 1/2, on dit que le dé $A$ est plus fort que le dé $B.$
+  \begin{enumerate}[resume]
+    \item Parmi les dés $A$ et $B$, lequel des deux dés est le plus fort ?
+    \item De la même façon, parmi les dés $B$ et $C$, lequel des deux dés est le plus fort ?
+    \item Parmi les dés $A$ et $C$, lequel des deux dés est le plus fort ?
+    \item Montrer que si je joue à ce jeu, quel que soit le dé que je choisis, mon adversaire peut toujours choisir un dé plus fort.
+  \end{enumerate}
+  A partir de maintenant, on change un peu les règles du jeu : on lance chaque dé deux fois et on fait la somme des deux résultats obtenus.
+  On note $X_A$ (respectivement $X_B$ et $X_C$) la variable aléatoire (v.a.) qui donne la somme des résultats de deux lancers indépendants du dé $A$ (resp. du dé $B,$ du dé $C$).
+  \begin{enumerate}[resume]
+    \item Déterminer la loi  de chacune des v.a. $X_A,$ $X_B,$ $X_C.$
+  \end{enumerate}
+  On dit que le dé $A$ est plus costaud que le dé $B$ si l'événement $\{X_A >X_B\}$ a une probabilité strictement supérieure à 1/2.
+  \begin{enumerate}[resume]
+    \item Montrer que $C$ est plus costaud que $B.$
+    \item Qu'en est-il pour $A$ et $B$ ? Qu'en est-il pour $A$ et $C$ ?
+    \item Si je joue à cette deuxième version du jeu, quel dé ai-je intérêt à choisir ? \\
+  \end{enumerate}
+
+\end{exo}
+
+\begin{solution}
+  \begin{enumerate}
+    \item $P(A > B) = P( A=4 ) = \frac{4}{6} = \frac{2}{3}$.
+    \item D'après la question précédente « $A$ est plus fort que $B$ » car $P(A > B) > \frac{1}{2}.$
+    \item $P(B > C) = P( C=2 ) = \frac{4}{6} = \frac{2}{3} > \frac{1}{2}$ et donc « $B$ est plus fort que $C$ ».
+    \item $P(C > A) = P(C=6) + P(C=2,A=0) = \frac{2}{6} + \frac{4}{6} \times \frac{2}{6} = \frac{5}{9} > \frac{1}{2}$ et donc « $C$ est plus fort que $A$ ».
+    \item C'est une conséquence directe des trois questions précédentes car $A$ est plus fort que $B$, qui est plus fort que $C$, qui plus fort que $A$.
+    \item Nous avons $X_{A} \in \{0,4,8\}$ avec $P(X_{A}=0) = P(A=0)^{2} = \frac{1}{9}$, $P(X_{A}=8) = P(A=4)^{2} = \frac{4}{9}$ et donc finalement $P(X_{A}=4) = 1-\frac{1}{9}-\frac{4}{9} = \frac{4}{9}$.\\
+    Nous avons $X_{B} \in \{6\}$ avec $P(X_{B}=6)=1$.\\
+    Nous avons $X_{C} \in \{4,8,12\}$ avec $P(X_{C}=4) = P(C=2)^{2} = \frac{4}{9}$, $P(X_{C}=12) = P(C=6)^{2} = \frac{1}{9}$ et donc finalement $P(X_{C}=8) = 1-\frac{4}{9}-\frac{1}{9} = \frac{4}{9}$.
+    \item $P(C+C > B+B) = P(X_{C}=8) + P(X_{C}=12) = \frac{4}{9} + \frac{1}{9} = \frac{5}{9} > \frac{1}{2}$ et donc « $C$ est plus costaud que $B$ ».
+    \item $P(B+B > A+A) = P(X_{A}=0) + P(X_{A}=4) = \frac{1}{9} + \frac{4}{9} = \frac{5}{9} > \frac{1}{2}$, donc « $B$ est plus costaud que $A$ ».\\
+    $P(C+C > A+A) = P(X_{C}=12) + P(X_{C}=8)P(X_{A} < 8) + P(X_{C}=4)P(X_{A} < 4) = \frac{1}{9} + \frac{4}{9}\times\frac{5}{9} + \frac{4}{9}\times\frac{1}{9} = \frac{34}{81} < \frac{1}{2}$, et $P(A+A > C+C) = P(A = 8)P(C=4) = \frac{4}{9}\times\frac{4}{9} = \frac{16}{81} < \frac{1}{2}$. Ainsi, ni $A$ ni $C$ est plus costaud que l'autre.
+  \end{enumerate}
+
+\end{solution}
+
+\end{document}
