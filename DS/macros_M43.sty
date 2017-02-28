@@ -1,0 +1,131 @@
+\ProvidesPackage{macros_M43}
+
+% ---------------------
+%       Bibliothèques
+% ---------------------
+
+% ------------- encodage
+\usepackage{iftex}
+\ifPDFTeX % PDFLaTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{textcomp} % pour utiliser certains caractères
+  \usepackage{lmodern}
+\else % LuaLaTeX & XeLaTeX
+  \usepackage{fontspec}
+\fi
+% ------------- format de la page
+\usepackage[top=21mm,left=23mm,right=21mm,bottom=21mm,nohead]{geometry}
+% pour espacer un peut le texte
+\parskip=1mm
+\parindent=0mm
+\renewcommand{\baselinestretch}{1.3}
+\setlength{\abovedisplayskip}{2pt plus 4pt}
+\setlength{\belowdisplayskip}{3pt plus 4pt}
+\setlength{\abovedisplayshortskip}{1pt plus 4pt}
+\setlength{\belowdisplayshortskip}{2pt plus 4pt}
+% ------------- Les standards
+\usepackage{mathtools,amssymb,bm,amsthm}
+\usepackage{mathabx} % pour les doubles crochets d'intervalles d'entiers et \leq français
+% ------------- Pour le français
+\usepackage[french]{babel}
+\frenchbsetup{og=«, fg=»}
+%\usepackage[babel=true]{csquotes}
+%\frenchspacing
+% ------------- Pour ajuster les enumerate
+\usepackage[shortlabels]{enumitem}
+% compatibilite enumitem - franch babel (d'après la doc de 28 septembre 2014, p.14)
+\newlength\mylabelwidth
+\newcommand*{\mylabel}{\textemdash} % ou \textendash (tiret plus court)
+\settowidth{\mylabelwidth}{\mylabel}
+\setlist[itemize]{label=\mylabel, nosep}
+\setlist[1]{labelindent=\parindent}
+\setlist{labelwidth=\mylabelwidth,
+        itemsep=0.4ex plus 0.2ex minus 0.2ex,
+        parsep=0.4ex plus 0.2ex minus 0.2ex,
+        topsep=0.8ex plus 0.4ex minus 0.4ex,
+        partopsep=0.4ex plus 0.2ex minus 0.2ex,
+        leftmargin=!}
+% mon changement perso
+\setlist{leftmargin=7mm}
+% ------------- Pour prévenir les coupures des pages au mauvaise endroits
+\usepackage{needspace}
+%\widowpenalty10000
+%\clubpenalty10000
+\usepackage[all]{nowidow}
+% ------------- pour des dessins (en particulier pour \exoimg)
+\usepackage{tikz}
+
+% ---------------------
+%       Macros
+% ---------------------
+
+% Les exercices
+\def\exoimg{\tikz[overlay]{\NoAutoSpacing;\draw[red, opacity=0.7] (-0.1,0.4) -- (-0.1,-2.1) (-0.4,-0.1) -- (2.1,-0.1);}}
+\newcounter{numeroexo}
+\setcounter{numeroexo}{0}
+\newlength{\afterexo}\setlength{\afterexo}{3mm plus 4mm}
+\newenvironment{exercice}[1]
+   {\needspace{4\baselineskip}\vspace{1mm}\par\refstepcounter{numeroexo}\hspace*{-1mm}\noindent{\exoimg\bfseries\sffamily #1 \arabic{numeroexo}}}
+   {\par\vspace{\afterexo}}
+
+\newenvironment{exo}{\setcounter{equation}{0}\begin{exercice}{Exercice} \normalfont}{\end{exercice}}
+
+% les questions
+\renewcommand{\theenumi}{\alph{enumi})}
+\renewcommand{\labelenumi}{\bf\theenumi}
+\renewcommand{\theenumii}{(\roman{enumii})}
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\p@enumii}{} % pour qu'il ne rajoute rien devant (i) si \ref
+
+% indication
+\newenvironment{indication}{\noindent\em Indication:}{}
+
+%solutions
+\usepackage{environ}
+\newif\ifsolutions
+\solutionsfalse
+\def\exosol{\tikz[overlay]{\draw[red, opacity=0.7] (-0.1,0.9) -- (-0.1,-1.6) (-0.4,0.4) -- (2.1,0.4);}}
+\NewEnviron{solution}{\ifsolutions\hspace*{-1mm}\noindent\exosol\textbf{\sffamily Solution: }\BODY\fi}
+
+% les abréviations standards
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\1}{\ensuremath{\mbox{\rm 1\kern-0.23em I}}}
+
+% les fractions comme \sfrac
+\usepackage{xfrac}
+
+% des notes de bas de page avec des symboles
+% \usepackage[symbol*]{footmisc}
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+% intervalle d'entiers
+\newcommand{\iintv}[1]{\ldbrack #1\rdbrack}
+
+% pas de numéros des pages
+\pagestyle{empty}
+
+% ---- haut de la page ------
+\newcommand{\hautdepage}[1]{
+\thispagestyle{empty}
+\clearpage
+\textsc{Licence 2\ieme{} année, mention Mathématiques} \hfill \textsc{\large 2016-2017}\\
+\textsc{\large M43, Probabilités discrètes}
+
+\rule[0.5ex]{\textwidth}{0.1mm}
+\vskip 3mm
+\begin{center}
+    {\sc{\Large #1}}
+\end{center}
+\rule[0.5ex]{\textwidth}{0.1mm}
+}
+% ---- TSVP ------
+\usetikzlibrary{shapes.arrows}
+\newcommand{\tsvp}{\ifsolutions\else%
+\begin{tikzpicture}[remember picture,overlay]
+    \node[single arrow, fill=black!3, above left=2cm, draw=black, inner sep=3mm, scale=.7] at (current page.south east) {\textsf{ T.S.V.P.}};
+\end{tikzpicture}
+\fi}
+
