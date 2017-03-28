@@ -1,6 +1,11 @@
 \documentclass[a4paper,12pt,reqno]{amsart}
 \usepackage{macros_M43}
 
+% les opérateurs de moments
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\V}{V}
+\DeclareMathOperator{\Cov}{Cov}
+
 \begin{document}
 
 % ===================================================================
@@ -14,7 +19,7 @@
   On lance un dé équilibré. On désigne par $X$ le nombre obtenu avec ce dé.
 
   \begin{enumerate}
-    \item Déterminer l'espérance et la variance de $X$.
+    \item Déterminer l'espérance $\E(X)$ et la variance $\V(X)$ de $X$.
     \item Calculer l'espérance et la variance de la somme obtenue en lançant trois dés. Comparer aux valeurs de l'espérance et de la variance de trois fois la valeur d'un dé.
   \end{enumerate}
 
@@ -29,7 +34,7 @@
 
   \begin{enumerate}
     \item On note $ X $ la somme (positive ou négative) que va gagner Bob. Quelle est la loi de $ X $?
-    \item Calculer son espérance $ E(X) $. Comparer ce gain moyen avec la somme de 4 euros que Bob réclame et conclure.
+    \item Calculer son espérance $ \E(X) $. Comparer ce gain moyen avec la somme de 4 euros que Bob réclame et conclure.
   \end{enumerate}
 
 \end{exo}
@@ -40,8 +45,8 @@
   Soit $X$ une variable aléatoire à valeurs dans $\N^*$ admettant une espérance.
 
   \begin{enumerate}
-    \item Montrer que l'on a $\displaystyle E(X)=\sum_{k=1}^\infty P(X \geq k) \, .$ Donner et démontrer une formule analogue pour $E(X^2)$ (si $X^2$ admet une espérance).
-    \item Soit $X$ est une variable aléatoire de loi géométrique de paramètre $p$ ($p  \in ]0,1[$), utiliser la question précédente pour retrouver l'espérance de $X$.
+    \item Montrer que l'on a $\displaystyle \E(X)=\sum_{k=1}^\infty P(X \geq k) \, .$ Donner et démontrer une formule analogue pour $\E(X^2)$ (si $X^2$ admet une espérance).
+    \item Soit $X$ est une variable aléatoire de loi géométrique de paramètre $p$, avec $p  \in ]0,1[$. Utiliser la question précédente pour retrouver l'espérance de $X$.
   \end{enumerate}
 
 \end{exo}
@@ -49,14 +54,14 @@
 %-----------------------------------
 \begin{exo}
 
-  Dans une urne contenant au départ une boule verte et une rouge on effectue une suite de tirages d'une boule selon la procédure suivante. Chaque fois que l'on tire une boule verte, on la remet dans l'urne \emph{en y rajoutant une boule rouge}. Si l'on tire une boule rouge, on arrête les tirages. On désigne par $X$ le nombre de tirages effectués par cette procédure. On notera $V_i$ (resp. $R_i$) l'événement \emph{obtention d'une boule verte au $i$-ième tirage} (resp. \emph{rouge}).
+  Dans une urne contenant au départ une boule verte et une rouge on effectue une suite de tirages d'une boule selon la procédure suivante. Chaque fois que l'on tire une boule verte, on la remet dans l'urne \emph{en y rajoutant une boule rouge}. Si l'on tire une boule rouge, on arrête les tirages. On désigne par $X$ le nombre de tirages effectués par cette procédure. On notera $V_i$ (resp. $R_i$) l'événement \emph{obtention d'une boule verte au $i$\textsuperscript{e} tirage} (resp. \emph{rouge}).
 
   \begin{enumerate}
     \item Pour $k\in\N^{\ast}$, donner une expression de l'événement $\{X=k\}$ à l'aide des événements $V_i$ ($1\leq i\leq k-1$) et $R_k$.
     \item Que vaut $P_{V_1\cap\cdots\cap V_{n-1}}(V_n)$ pour $n\geq 2$?
     \item Déterminer la loi de $X$.
-    \item Calculer $E(X)$.
-    \item Calculer l'espérance de la variable aléatoire $\frac{1}{X}$.
+    \item Calculer $\E(X)$.
+    \item Calculer l'espérance de la variable aléatoire $\dsfrac{1}{X}$.
     \item On recommence l'expérience en changeant la procédure: à chaque tirage d'une boule verte on la remet dans l'urne \emph{en y rajoutant une boule verte}. Comme précédemment, on interrompt les tirages à la première apparition d'une boule rouge. Soit $Y$ le nombre de tirages effectués suivant cette nouvelle procédure. Trouver la loi de $Y$. Que peut-on dire de l'espérance de $Y$? Interpréter.
   \end{enumerate}
 
@@ -78,9 +83,15 @@
     $$
 
   \begin{enumerate}
-    \item Calculer $E(X)$, $E(X^2)$, $Var(X)$.
-    \item Donner la loi, l'espérance, la variance de la variable aléatoire
-    $Y$, définie par : $Y=1$ si $|X| > 2$, $Y=0$ sinon.
+    \item Calculer $\E(X)$, $\E(X^2)$, $\V(X)$.
+    \item Donner la loi, l'espérance et la variance de la variable aléatoire
+    $Y$, définie par :
+    $$ Y =
+        \begin{cases}
+          1 & \text{si\quad} |X| > 2\\
+          0 & \text{sinon}
+        \end{cases}.
+    $$
   \end{enumerate}
 
 \end{exo}
@@ -88,11 +99,11 @@
 %-----------------------------------
 \begin{exo}
 
-  Soit $X$ une v.a. telle que $E(X)=1$ et $\text{Var}(X)=5$. Trouver
+  Soit $X$ une variable aléatoire telle que $\E(X)=1$ et $\V(X)=5$. Trouver
 
   \begin{enumerate}
-    \item $E(2+X)^2$;
-    \item $\text{Var}(4-3X)$.
+    \item l'espérance $\E\big((2+X)^2\big)$;
+    \item la variance $\V(4-3X)$.
   \end{enumerate}
 
 \end{exo}
@@ -100,11 +111,11 @@
 %-----------------------------------
 \begin{exo}
 
-  Soit $X$ et $Y$ deux variables aléatoires indépendantes de loi de Bernoulli de paramètre 1/2. On définit les variables aléatoires $S=X+Y$ et $D=|X-Y|$.
+  Soit $X$ et $Y$ deux variables aléatoires indépendantes de loi de Bernoulli de paramètre $\dsfrac{1}{2}$. On définit les variables aléatoires $S=X+Y$ et $D=|X-Y|$.
 
   \begin{enumerate}
     \item Donner les lois de $S$ et $D$.
-    \item Calculer $Cov(S,D)$. Les variables aléatoires $S$ et $D$ sont-elles indépendantes?
+    \item Calculer $\Cov(S,D)$. Les variables aléatoires $S$ et $D$ sont-elles indépendantes?
   \end{enumerate}
 
 \end{exo}
@@ -112,15 +123,15 @@
 %-----------------------------------
 \begin{exo}
 
-  On considère une suite de $n$ épreuves répétées indépendantes, chaque épreuve ayant $k$ résultats possibles $r_1,\ldots,r_k$. On note $p_i$ la probabilité de réalisation du résultat $r_i$ lors d'une épreuve donnée. Par exemple si on lance $n$ fois un dé, $k=6$ et $p_i=1/6$ pour $1\leq i\leq 6$. Si on lance $n$ fois une paire de dés et que l'on s'intéresse à la somme des points, $k=11$ et les $p_i$ sont donnés par le tableau des $P(S=i+1)$: $p_1=1/36$, $p_2=2/36$,\dots \\
+  On considère une suite de $n$ épreuves répétées indépendantes, chaque épreuve ayant $k$ résultats possibles $r_1,\ldots,r_k$. On note $p_i$ la probabilité de réalisation du résultat $r_i$ lors d'une épreuve donnée. Par exemple si on lance $n$ fois un dé, $k=6$ et $p_i=\dsfrac{1}{6}$ pour $1\leq i\leq 6$. Si on lance $n$ fois une paire de dés et que l'on s'intéresse à la somme des points, $k=11$ et les $p_i$ sont donnés par le tableau des $P(S=i+1)$: $p_1=\dsfrac{1}{36}$, $p_2=\dsfrac{2}{36}$,\dots \\
   Pour $1\leq i\leq k$, notons $X_i$ le nombre de réalisations du résultat $r_i$ au cours des $n$ épreuves.
 
   \begin{enumerate}
-    \item Expliquer sans calcul pourquoi $Var(X_1+\cdots +X_k)=0$.
+    \item Expliquer sans calcul pourquoi $\V(X_1+\cdots +X_k)=0$.
     \item Quelle est la loi de $X_i$? Que vaut sa variance?
     \item Pour $i\neq j$, donner la loi et la variance de $X_i+X_j$.
-    \item En déduire $Cov(X_i,X_j)$.
-    \item Contrôler ce résultat en développant $Var(X_1+\cdots +X_k)$ et en utilisant la première question.
+    \item En déduire $\Cov(X_i,X_j)$.
+    \item Contrôler ce résultat en développant $\V(X_1+\cdots +X_k)$ et en utilisant la première question.
   \end{enumerate}
 
 \end{exo}
