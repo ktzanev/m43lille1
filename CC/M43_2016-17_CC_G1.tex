@@ -19,33 +19,31 @@ Interrogation
 
 %-----------------------------------
 \begin{exo}
-
-  Dans une poste d'un petit village, on remarque qu'entre 10 heures et 11 heures, la probabilité pour que deux personnes entrent durant la même minute est considérée comme nulle et que l'arrivée des personnes est indépendante de la minute considérée.\newline
-  On a observé que la probabilité pour qu'une personne se présente entre la minute $n$ et la minute $n+1$ est $p = \dsfrac{1}{10}$.\newline
-  On veut calculer la probabilité pour que $0,1,2,3,4,5,\dots$ personnes se présentent au guichet entre 10h et 11h.\newline
-  Soit la variable aléatoire X = « nombre de personnes se présentant au guichet entre 10h et 11h ».
-  \begin{enumerate}
-    \item Déterminer la loi de  $X$.
-    \item  Par quelle loi peut-on l'approcher ?
-    \item En utilisant cette approximation, calculer les probabilités suivantes :\\
-    $P(X=3)$, $P(X=4)$ et $P(X=5)$.
-
-    \item Quelle est la probabilité pour qu'au moins 10 personnes se présentent au guichet entre 10h et 11h? \emph{(Donner la réponse sous forme d'une somme.)}
-  \end{enumerate}
+ Dans un lot de 100 composants électroniques, il y a deux composants d\'efectueux. On pr\'el\`eve au hasard sans remise $n$ composants dans ce lot et on note $X$ le nombre de composants d\'efectueux parmi les $n$ pr\'elev\'es.
+\begin{enumerate}
+\item On suppose que $2 \le n \le 98.$ Donner la loi de $X.$
+ \item Exprimer le plus simplement possible  $P(X=2)$ lorsque $2 \le n \le 98.$
+ \item Quelle est la loi de $X$ si $n=100$ ?
+ \item Je choisis un composant au hasard. Quelle est la probabilit\'e qu'il soit d\'efectueux ?
+ \item En d\'eduire la loi de $X$ si $n=1.$
+ \item En d\'eduire aussi la loi de $X$ si $n=99.$
+\end{enumerate}
+ 
+ 
 \end{exo}
 
 \tsvp
-\newpage
-
 %-----------------------------------
 \begin{exo}
 
- On note $ N$ la variable aléatoire comptant le nombre d'œufs qu'un insecte donné pond. On suppose que $N$ suit une loi de Poisson de paramètre $\lambda>0$. On suppose également que chaque œuf donne naissance à un nouvel insecte avec probabilité $p \in \,]0,1[$\,, indépendamment de l'éclosion des autres œufs et de la valeur de $N$. On note $D$ le nombre d'insectes éclos.
-  \begin{enumerate}
+On s'intéresse à la reproduction d'un insecte. On suppose que chacun de ses  œufs donne naissance à un nouvel insecte avec une probabilité $p \in \,]0,1[$\,, indépendamment du nombre d'œufs pondus et de l'éclosion des autres œufs.
+\begin{enumerate}
+ \item Si l'insecte a pondu $5$ œufs, quelle est la probabilité qu'exactement $3$ insectes éclosent ?
+\end{enumerate}
 
-    \item Sachant que l'insecte pond $5$ œufs, quelle est la probabilité que $3$ insectes éclosent ?
-
-    \item Quelle est la loi de $D$ sachant que $\{N=n\}$ avec $n\ge 1$?
+ On note maintenant $ N$ la variable aléatoire comptant le nombre d'œufs qu'un insecte donné pond. On suppose que $N$ suit une loi de Poisson de paramètre $\lambda>0$.  On note $D$ le nombre d'insectes éclos.
+  \begin{enumerate}\setcounter{enumi}{1}
+  \item Quelle est la loi de $D$ sachant que $\{N=n\}$ avec $n\ge 1$?
 
     \item En déduire que pour tout $(n, d)\in\mathbb{N}^2$
       $$
@@ -74,6 +72,9 @@ Interrogation
   \end{enumerate}
 
 \end{exo}
+
+
+
 \end{document}
 
 
