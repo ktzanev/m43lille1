@@ -1,0 +1,126 @@
+\documentclass[12pt,reqno]{amsart}
+\usepackage{macros_M43}
+
+% pour voir les solution il faut enlever le commentaire de la ligne suivante
+\solutionstrue
+
+\begin{document}
+
+% ==================================
+\hautdepage{%
+\ifsolutions{Solutions de l'interrogation}%
+\else{Interrogation}\fi%
+\par\normalfont\normalsize
+30 mars 2017\\{[ durée: 1 heure ]}\par
+  }
+% ==================================
+\ifsolutions\else
+\textit{Les documents et les calculatrices ne sont pas autorisés.}
+\vspace{7mm}
+\fi
+
+
+%-----------------------------------
+\begin{exo}
+
+  L'oral d'un concours comporte au total $100$ sujets; les candidats tirent au sort trois sujets différents et choisissent alors le sujet traité parmi ces trois sujets. Un candidat se présente en ayant révisé $70$ sujets sur les $100$.
+  \begin{enumerate}
+    \item Déterminer la probabilité pour que le candidat ait révisé:
+    \begin{enumerate}
+      \item les trois sujets tirés;
+      \item aucun des trois sujets.
+    \end{enumerate}
+    \item Soit la variable aléatoire $X=$\,« nombre de sujets révisés par le candidat parmi les 3 sujets tirés au sort».
+    \begin{enumerate}
+      \item Déterminer la loi de $X$. \emph{(On pourra identifier une loi connue.)}
+      \item En déduire la probabilité pour que le candidat ait révisé deux des sujets tirés.\\
+      \emph{Le résultat doit être donné sous forme d'une fraction irréductible.}
+    \end{enumerate}
+  \end{enumerate}
+\end{exo}
+% ~~~~~~~~~~~~~
+\begin{solution}
+  \begin{enumerate}
+    \item Soit $\iintv{1;100}$ l'ensemble des questions numérotées de $1$ à $100$. On considère l'univers $\Omega = \{M \in \mathcal{P}(\iintv{1;100}) \;|\; \#M=3\}$ des parties à $3$ éléments avec l'équiprobabilité. Ainsi nous avons $\#\Omega = C_{100}^{3}$.
+    \begin{enumerate}
+      \item Le nombre de configurations avec $3$ sujets révisés est $C_{70}^{3}$. Ainsi
+      $$
+        P(\text{«trois sujets révisés»}) = \frac{C_{70}^{3}}{C_{100}^{3}} = \frac{70.69.68}{100.99.98} = \frac{17.23}{3.5.7.11} = \frac{391}{1155}.
+      $$
+      \item Le nombre de configurations avec $3$ sujets non révisés est $C_{30}^{3}$. Ainsi
+      $$
+        P(\text{«aucun sujet révisé»}) = \frac{C_{30}^{3}}{C_{100}^{3}} = \frac{30.29.28}{100.99.98} = \frac{29}{3.5.7.11} = \frac{29}{1155}.
+      $$
+    \end{enumerate}
+    \item Soit la variable aléatoire $X=\text{« nombre de sujets révisés par le candidat »}$.
+    \begin{enumerate}
+      \item Comme il s'agit de compter le nombre de «succès» lors de tirages sans remise, on remarque que $X$ suit une loi hypergéométrique : $X \sim M(100,70,3)$. Ainsi $X \in \{0,1,2,3\}$ avec
+      $$
+        P(X=k) = \frac{C_{70}^{k}C_{30}^{3-k}}{C_{100}^{3}}
+          \text{\quad pour\quad}
+            k \in \{0,1,2,3\}.
+      $$
+      \item Nous avons
+      $$
+        P(\text{«deux sujets révisés»}) = P(X=2) = \frac{C_{70}^{2}C_{30}^{1}}{C_{100}^{3}} = \frac{70.69.30}{100.99.98} = \frac{23}{2.7.11} = \frac{23}{154}.
+      $$
+    \end{enumerate}
+  \end{enumerate}
+\end{solution}
+
+% \ifsolutions\else
+%   \tsvp
+%   \newpage
+% \fi
+
+%-----------------------------------
+\begin{exo}
+
+  Un serveur brise en moyenne trois verres et une assiette par mois. Notons $V$ le nombre de verres cassés et $A$ le nombre d'assiettes cassées par un serveur. On suppose que $V$ et $A$ sont indépendantes et suivent des lois de Poisson de paramètres respectifs $3$ et $1$. Soit $Z$ le nombre total de verres et d'assiettes cassés par mois par ce même serveur.
+  \begin{enumerate}
+    \item Exprimer $Z$ en fonction de $V$ et de $A$.
+    \item Calculer les probabilités $P(Z=0)$, $P(Z=1)$ et $P(Z=2)$.
+    \item Pour $k \in \mathbb{N}$, calculer $P(Z=k)$. Quelle loi connue suit la variable $Z$ ?
+    \item Un serveur est caractériel : si à la fin du mois il n'a pas cassé trois verres, il fête cela en brisant des verres pour arriver au minimum de $3$ verres cassés dans le mois. On note $W$ la variable qui compte le nombre de verres cassés par ce serveur particulier. Donner la loi de $W$.
+  \end{enumerate}
+
+\end{exo}
+% ~~~~~~~~~~~~~
+\begin{solution}
+  \begin{enumerate}
+    \item D'après la définition de $Z$ nous avons $Z = V + A$.
+  \end{enumerate}
+  \emph{Dans la suite on utilise l'indépendance de $V$ et $A$ pour écrire
+    $$
+      P(V=i, A=j) = P(V=i)P(A=j) = (e^{-3}\frac{3^{i}}{i!})(e^{-1}\frac{1^{j}}{j!}) = e^{-4}\frac{3^{i}}{i!j!}.
+    $$}
+  \begin{enumerate}[resume]
+    \item Nous avons
+    \begin{align*}
+      P(Z=0) &= P(V=0, A=0) = P(V=0)P(A=0) = e^{-3}e^{-1}=e^{-4},\\
+      P(Z=1) &= P(V=1, A=0) + P(V=0, A=1) = (e^{-3}3)(e^{-1})+(e^{-3})(e^{-1})=e^{-4}\,4,\\
+      P(Z=2) &= P(V=2, A=0) + P(V=1, A=1) + P(V=0, A=2)\\
+             &= (e^{-3}\frac{3^{2}}{2!})(e^{-1})+(e^{-3}3)(e^{-1})+(e^{-3})(e^{-1}\frac{1^{2}}{2!})=e^{-4}(\frac{9}{2}+3+\frac{1}{2})=e^{-4}\,8.
+    \end{align*}
+    \item Comme $Z=k$ si et seulement si $V=i$, $A=k-i$ avec $i \in \{0,1,\ldots,k\}$, nous avons
+    \begin{multline*}
+      P(Z=k) = \sum_{i=0}^k P(V=i, A=k-i)
+        = \sum_{i=0}^k \left(e^{-3}\frac{3^{i}}{i!}\right)\left(e^{-1}\frac{1^{(k-i)}}{(k-i)!}\right) \\
+        = \sum_{i=0}^k e^{-4}\frac{3^{i}1^{(k-i)}}{i!(k-i)!}
+        = \frac{e^{-4}}{k!} \sum_{i=0}^k \frac{k!}{i!(k-i)!}3^{i}1^{(k-i)} = e^{-4}\frac{4^k}{k!}.
+    \end{multline*}
+    On constate que $Z$ suit la loi de Poisson avec paramètre $\lambda = 4$.
+    \item D'après l'énoncé
+    $$
+      W = \begin{cases}
+        3 & \text{si\quad} V \leq 3\\
+        V & \text{sinon}
+      \end{cases}.
+    $$
+    Ainsi $W \in \{3,4,5,\ldots\}$ avec $P(W=3) = P(V=0)+P(V=1)+P(V=2)+P(V=3) = e^{-3}\left( 1+3+\frac{3^{2}}{2!} + \frac{3^{3}}{3!}\right) = e^{-3}\,13$, et pour $k \geq 3$, $P(W=k) = P(V=k) = e^{-3}\,\frac{3^{k}}{k!}$.
+  \end{enumerate}
+\end{solution}
+
+\end{document}
+
+
