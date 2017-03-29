@@ -3,7 +3,7 @@
 \usepackage{macros_M43}
 
 % pour voir les solutions il faut enlever le commentaire de la ligne suivante
-% \solutionstrue
+\solutionstrue
 
 \begin{document}
 
@@ -84,7 +84,12 @@
       P(\text{«perdre»}) = P(E_{12})+P(E_{13})+P(E_{23})-P(E_{1})-P(E_{2})-P(E_{3}),
     $$
     car $E_{ij} \cap E_{ik} = E_{i}$ si $j \neq k$, et $E_{12}\cap E_{13}\cap E_{23} = \emptyset$. Comme dans la question précédente : $P(E_{13}) = P(E_{23}) =\frac{2^{10}}{3^{10}}$, et comme dans la question \ref{1etiquette} $P(E_{2}) = P(E_{3}) = \frac{1}{3^{10}}$, ainsi $P(\text{« perdre »}) = 3 \times \frac{2^{10}}{3^{10}} - 3 \times \frac{1}{3^{10}}= \frac{2^{10}-1}{3^{9}}$.
-    \item Comme la probabilité de trouver l'étiquette $2$ avant l'étiquette $3$ est la même que celle de trouver l'étiquette $3$ avant l'étiquette $2$ et que ces deux événements sont complémentaires, on peut conclure que cette probabilité est de $\frac{1}{2}$.
+    \item La probabilité de trouver l'étiquette $2$ avant l'étiquette $3$ est la même que celle de trouver l'étiquette $3$ avant l'étiquette $2$ et ces deux événements sont disjoints et leur union est «le concurant a trouver $2$ ou $3$» (dont la négation est $E_{1}$).
+
+    Ainsi nous avons $P(\text{«$2$ avant $3$»}) + P(\text{«$3$ avant $2$»}) + P(E_{1}) = 1$ avec $P(\text{«$2$ avant $3$»}) = P(\text{«$3$ avant $2$»})$ et on peut conclure que cette probabilité est de
+      $$
+        P(\text{«$2$ avant $3$»}) = \frac{1}{2}(1-\frac{1}{3^{10}}).
+      $$
     \item Le nombre de configurations contenant des étiquettes $1$ et $2$ dans les $4$ premières balises et l'étiquette $3$ dans la $5$\textsuperscript{e} est de $2^{4}-2$ (on enlève les deux configurations contenant que des $1$ ou que des $2$ dans les $4$ premières balises). Et c'est le même nombre dans les deux autres cas où on gagne à la $5$\textsuperscript{e} balise avec un $1$ ou avec un $2$. Ainsi la probabilité de gagner à la $5$\textsuperscript{e} balise est de $3 \times \frac{2^{4}-2}{3^{5}} = \frac{14}{81}$.
   \end{enumerate}
 
@@ -123,7 +128,7 @@
   \begin{enumerate}
     \item Déterminer la probabilité de l'événement $\{A>B\}$.
   \end{enumerate}
-  \emph{Si la probabilité de l'événement  $\{A>B\}$ est strictement supérieure à $\sfrac{1}{2}$, on dit que « le dé $A$ est plus fort que le dé $B$ ».}
+  \emph{Si la probabilité de l'événement  $\{A>B\}$ est strictement supérieure à $\dsfrac{1}{2}$, on dit que « le dé $A$ est plus fort que le dé $B$ ».}
   \begin{enumerate}[resume]
     \item Parmi les dés $A$ et $B$, est-ce que l'un des deux dés est plus fort ?
     \item De la même façon, parmi les dés $B$ et $C$, est-ce que l'un des deux dés est plus fort ?
@@ -135,7 +140,7 @@
   \begin{enumerate}[resume]
     \item Déterminer la loi  de chacune des variables aléatoires $X_A$, $X_B$ et $X_C$.
   \end{enumerate}
-  \emph{On dit que « le dé $A$ est plus costaud que le dé $B$ » si l'événement $\{X_A >X_B\}$ a une probabilité strictement supérieure à $\sfrac{1}{2}$.}
+  \emph{On dit que « le dé $A$ est plus costaud que le dé $B$ » si l'événement $\{X_A >X_B\}$ a une probabilité strictement supérieure à $\dsfrac{1}{2}$.}
   \begin{enumerate}[resume]
     \item Montrer que $C$ est plus costaud que $B.$
     \item Qu'en est-il pour $A$ et $B$ ? Qu'en est-il pour $A$ et $C$ ?
