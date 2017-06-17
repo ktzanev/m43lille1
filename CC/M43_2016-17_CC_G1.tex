@@ -1,0 +1,79 @@
+\documentclass[12pt,reqno]{amsart}
+\usepackage{macros_M43}
+
+\begin{document}
+
+% ==================================
+\hautdepage{%
+Interrogation
+\par\normalfont\normalsize
+29 mars 2017\\{[ durée: 1 heure ]}\par
+  }
+% ==================================
+\ifsolutions\else
+\textit{Les documents et les calculatrices ne sont pas autorisés.}
+\vspace{7mm}
+\fi
+
+%-----------------------------------
+\begin{exo}
+
+ Dans un lot de 100 composants électroniques, il y a deux composants défectueux. On prélève au hasard sans remise $n$ composants dans ce lot et on note $X$ le nombre de composants défectueux parmi les $n$ prélevés.
+\begin{enumerate}
+\item On suppose que $2 \le n \le 98.$ Donner la loi de $X.$
+ \item Exprimer le plus simplement possible  $P(X=2)$ lorsque $2 \le n \le 98.$
+ \item Quelle est la loi de $X$ si $n=100$ ?
+ \item Je choisis un composant au hasard. Quelle est la probabilité qu'il soit défectueux ?
+ \item En déduire la loi de $X$ si $n=1.$
+ \item En déduire aussi la loi de $X$ si $n=99.$
+\end{enumerate}
+
+
+\end{exo}
+
+\tsvp
+%-----------------------------------
+\begin{exo}
+
+On s'intéresse à la reproduction d'un insecte. On suppose que chacun de ses  œufs donne naissance à un nouvel insecte avec une probabilité $p \in \,]0,1[$\,, indépendamment du nombre d'œufs pondus et de l'éclosion des autres œufs.
+\begin{enumerate}
+ \item Si l'insecte a pondu $5$ œufs, quelle est la probabilité qu'exactement $3$ insectes éclosent ?
+\end{enumerate}
+
+ On note maintenant $ N$ la variable aléatoire comptant le nombre d'œufs qu'un insecte donné pond. On suppose que $N$ suit une loi de Poisson de paramètre $\lambda>0$.  On note $D$ le nombre d'insectes éclos.
+  \begin{enumerate}\setcounter{enumi}{1}
+  \item Quelle est la loi de $D$ sachant que $\{N=n\}$ avec $n\ge 1$?
+
+    \item En déduire que pour tout $(n, d)\in\mathbb{N}^2$
+      $$
+        P(D = d \text{ et } N = n)=
+          \begin{dcases}
+            0 & \text{ si } d>n \\
+            \frac{(\lambda p)^d}{d!}
+            ~e^{-\lambda}\,
+            \frac{\big[\lambda (1-p)\big]^{\makebox[4pt][l]{$\scriptstyle n-d$}}}{(n-d)!}\quad
+              & \text{ si } d\le n
+          \end{dcases}\quad.
+      $$
+
+    \item Démontrer que $D$ suit une loi de Poisson de paramètre $p\lambda$.
+
+    \item On suppose dans cette question que le produit $p\lambda$ est égal à $1$. Soit $E$ la variable
+      $$
+        E=
+          \begin{cases}
+            \text{«peu»} & \text{si\quad} D < 4\\
+            \text{«beaucoup»} & \text{sinon}
+          \end{cases}\quad.
+      $$
+      Déterminer la loi de $E$.
+
+  \end{enumerate}
+
+\end{exo}
+
+
+
+\end{document}
+
+
