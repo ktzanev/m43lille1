@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt,reqno]{amsart}
+\usepackage{macros_M43}
+
+\begin{document}
+
+% ==================================
+\hautdepage{
+
+\ifsolutions{Solutions de l'examen}\else{Examen}\fi\par\normalfont\normalsize
+10 mai 2017\\{[ durée: 3 heures ]}\par
+}
+% ==================================
+\ifsolutions\else
+%{\fontencoding{U}\fontfamily{futs}\selectfont\char 66\relax}
+\tikz[baseline={(0,0)}]{\NoAutoSpacing\node(e){!};\draw[red,ultra thick,line join=round,yshift=-.15ex](90:1em)--(210:1em)--(330:1em)--cycle;}
+\hfill\begin{minipage}[c]{.9\textwidth}
+\emph{%
+  Vous êtes autorisés à garder une feuille A4 manuscrite recto-verso.\\
+  Tout autre document est interdit. Les calculatrices sont interdites.
+}
+\end{minipage}
+\tsvp
+\vspace*{1.4cm}
+\fi
+
+
+%-----------------------------------
+\begin{exo}
+  On observe une classe de maternelle composée de 24 élèves. Un jour, la maîtresse regarde la couleur des tee-shirts des enfants. Elle voit que seuls deux enfants portent un tee-shirt jaune.
+  \begin{enumerate}
+    \item On suppose dans un premier temps que les enfants sont alignés au hasard sur une colonne, les uns derrière les autres. La  maîtresse observe la position des deux enfants au tee-shirt jaune.
+    \begin{enumerate}
+      \item Décrire un espace de probabilité $(\Omega,\mathcal P(\Omega),P)$ associé à cette expérience.
+      \item Quelle est la probabilité que les deux enfants au tee-shirt jaune soient l'un juste derrière l'autre (avec aucun autre enfant entre eux deux) ?
+      \item On note $N$ le  nombre d'enfants se trouvant entre les 2 enfants en tee-shirt jaune (l'événement $\{N=0\}$ correspond au cas où les deux enfants en tee shirt jaune sont l'un juste derrière l'autre). Quelle est la loi de la variable aléatoire $N$ ?
+    \end{enumerate}
+    \item  On suppose maintenant que les enfants se sont placés au hasard, non pas en colonne mais en rond  pour faire une ronde. Quelle est alors la probabilité que les deux enfants en jaune soient côte à côte ?
+  \end{enumerate}
+\end{exo}
+\bigskip
+
+%-----------------------------------
+\begin{exo}
+  Une urne contient 7 boules : 2 bleues, 3 jaunes et 2 rouges. On en choisit 3 au hasard (sans remise).
+  \begin{enumerate}
+    \item  Donner un espace de probabilité $(\Omega, \mathcal P(\Omega), P)$ permettant de modéliser cette expérience aléatoire.
+  \end{enumerate}
+  On note respectivement $B, J$ et $R$ la variable aléatoire correspondant au nombre de boules bleues (resp. jaunes, resp. rouges) parmi les trois boules choisies.
+  \begin{enumerate}[resume]
+    \item Quelle est la probabilité d'obtenir 2 boules rouges ?
+    \item Quelle est la loi de la variable aléatoire $R$ ?
+    \item Déterminer la loi du vecteur aléatoire $(B,J)$.\\
+      \textit{On pourra donner le résultat sous forme d'un tableau.}
+    \item Calculer $P(B>J).$
+    \item Calculer la covariance $\textrm{cov}(B,J)$ de $B$ et $J$.
+    \item Calculer de deux façons différentes $\textrm V(B+J)$ la variance de la variable aléatoire $B+J$.
+  \end{enumerate}
+\end{exo}
+\bigskip
+
+%-----------------------------------
+\begin{exo}%\textbf{(Combat de dés)}
+  \begin{enumerate}
+    \item(Question préliminaire) Soit $Z$ une variable aléatoire à valeurs dans $\mathbb N^*$ admettant une espérance, notée $E(Z)$. Montrez que
+    $$
+      E(Z) = \sum_{j = 1}^\infty  P(Z\ge j).
+    $$
+    \end{enumerate}
+    Soit $n \ge 1$ un entier. Deux joueurs utilisent un dé à $n$ faces (numérotées $1, 2, \ldots, n$) de la manière suivante:
+    \begin{itemize}
+      \item le joueur A lance le dé, obtient le résultat $X$, et verse 3 euros au joueur B;
+      \item le joueur B lance alors le dé jusqu'à ce qu'il obtienne une valeur supérieure ou égale à $X$ (la partie s'arrête alors); à chaque lancer, il donne 1 euro au joueur A.
+    \end{itemize}
+    On note $M$ la somme versée au cours de la partie par le joueur B au joueur A.
+    \begin{enumerate}[resume]
+      \item Quelle est la loi de $X$ ?
+      \item Calculer $P_{\{X=1\}}(M=1)$, puis $P_{\{X=1\}}(M=j),$ pour $j \ge 2$.
+      \item Pour tous $k \ge 2$ et  $j \ge 1$, calculer  $P_{\{X=k\}}(M \ge j)$ puis $P_{\{X=k\}}(M=j)$ en fonction de $n, k$ et $j$.
+      \item Déduire des questions précédentes que, pour $j \ge 2$
+        $$
+          P(M \ge j)  = \frac{1}{n } \sum_{k=2}^n \left(\frac{k-1}{n}\right)^{j-1}.
+        $$
+      \item Montrer que la variable $M$ admet une espérance, qui peut s'écrire
+        $$
+          E(M) = \frac{1}{n} + \sum_{k=2}^{n} \frac{1}{n-(k-1)}.
+        $$
+      \item Quelle est la limite de  $E(M)$ quand  $n$ tend vers l'infini ?
+      \item Donner un équivalent de $E(M)$ quand $n$ tend vers l'infini.
+      \item On dit que le jeu est favorable au joueur A si l'espérance de son gain est positive ou nulle, défavorable sinon. Montrer qu'il existe un entier $n_0$ tel que, si $n \le n_0,$ le jeu est défavorable au joueur A tandis que si $n > n_0,$ le jeu lui est favorable.
+  \end{enumerate}
+\end{exo}
+
+\end{document}
+
