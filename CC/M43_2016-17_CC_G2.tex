@@ -54,7 +54,7 @@
     \end{enumerate}
     \item Soit la variable aléatoire $X=\text{« nombre de sujets révisés par le candidat »}$.
     \begin{enumerate}
-      \item Comme il s'agit de compter le nombre de «succès» lors de tirages sans remise, on remarque que $X$ suit une loi hypergéométrique : $X \sim \mathcal{H}(100,70,3)$. Ainsi $X \in \{0,1,2,3\}$ avec
+      \item Comme il s'agit de compter le nombre de «succès» lors de tirages sans remise, on remarque que $X$ suit une loi hypergéométrique : $X \sim M(100,70,3)$. Ainsi $X \in \{0,1,2,3\}$ avec
       $$
         P(X=k) = \frac{C_{70}^{k}C_{30}^{3-k}}{C_{100}^{3}}
           \text{\quad pour\quad}
@@ -62,7 +62,7 @@
       $$
       \item Nous avons
       $$
-        P(\text{«deux sujets révisés»}) = P(X=2) = \frac{C_{70}^{2}C_{30}^{1}}{C_{100}^{3}} = \frac{70.69.30.3}{100.99.98} = \frac{23.3}{2.7.11} = \frac{69}{154}.
+        P(\text{«deux sujets révisés»}) = P(X=2) = \frac{C_{70}^{2}C_{30}^{1}}{C_{100}^{3}} = \frac{70.69.30}{100.99.98} = \frac{23}{2.7.11} = \frac{23}{154}.
       $$
     \end{enumerate}
   \end{enumerate}
@@ -118,15 +118,6 @@
       \end{cases}.
     $$
     Ainsi $W \in \{3,4,5,\ldots\}$ avec $P(W=3) = P(V=0)+P(V=1)+P(V=2)+P(V=3) = e^{-3}\left( 1+3+\frac{3^{2}}{2!} + \frac{3^{3}}{3!}\right) = e^{-3}\,13$, et pour $k \geq 3$, $P(W=k) = P(V=k) = e^{-3}\,\frac{3^{k}}{k!}$.
-
-    En résumé, pour $k \in \mathbb{N}\setminus \{0,1,2\}$
-    $$
-      P(W=k) =
-        \begin{dcases}
-                        13e^{-3} & \text{si\quad} k = 3\\
-          \frac{3^{k}}{k!}e^{-3} & \text{si\quad} k > 3
-        \end{dcases}.
-    $$
   \end{enumerate}
 \end{solution}
 

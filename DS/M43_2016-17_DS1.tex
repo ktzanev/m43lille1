@@ -1,9 +1,9 @@
 \documentclass[a4paper,12pt,reqno]{amsart}
-\usepackage{graphicx}
+\usepackage{xfrac}
 \usepackage{macros_M43}
 
 % pour voir les solutions il faut enlever le commentaire de la ligne suivante
-\solutionstrue
+%\solutionstrue
 
 \begin{document}
 
@@ -15,7 +15,7 @@
 }
 % ==================================
 \ifsolutions\else
-% {\fontencoding{U}\fontfamily{futs}\selectfont\char 66\relax}
+%{\fontencoding{U}\fontfamily{futs}\selectfont\char 66\relax}
 \tikz[baseline={(0,0)}]{\NoAutoSpacing\node(e){!};\draw[red,ultra thick,line join=round,yshift=-.15ex](90:1em)--(210:1em)--(330:1em)--cycle;}
 \hfill\begin{minipage}[c]{.9\textwidth}
 \emph{%
@@ -128,7 +128,7 @@
   \begin{enumerate}
     \item Déterminer la probabilité de l'événement $\{A>B\}$.
   \end{enumerate}
-  \emph{Si la probabilité de l'événement  $\{A>B\}$ est strictement supérieure à $\dsfrac{1}{2}$, on dit que « le dé $A$ est plus fort que le dé $B$ ».}
+  \emph{Si la probabilité de l'événement  $\{A>B\}$ est strictement supérieure à $\sfrac{1}{2}$, on dit que « le dé $A$ est plus fort que le dé $B$ ».}
   \begin{enumerate}[resume]
     \item Parmi les dés $A$ et $B$, est-ce que l'un des deux dés est plus fort ?
     \item De la même façon, parmi les dés $B$ et $C$, est-ce que l'un des deux dés est plus fort ?
@@ -140,7 +140,7 @@
   \begin{enumerate}[resume]
     \item Déterminer la loi  de chacune des variables aléatoires $X_A$, $X_B$ et $X_C$.
   \end{enumerate}
-  \emph{On dit que « le dé $A$ est plus costaud que le dé $B$ » si l'événement $\{X_A >X_B\}$ a une probabilité strictement supérieure à $\dsfrac{1}{2}$.}
+  \emph{On dit que « le dé $A$ est plus costaud que le dé $B$ » si l'événement $\{X_A >X_B\}$ a une probabilité strictement supérieure à $\sfrac{1}{2}$.}
   \begin{enumerate}[resume]
     \item Montrer que $C$ est plus costaud que $B.$
     \item Qu'en est-il pour $A$ et $B$ ? Qu'en est-il pour $A$ et $C$ ?
