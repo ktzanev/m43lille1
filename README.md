@@ -2,6 +2,10 @@
 
 Les feuilles de TD du module M43 - Probabilités discrètes de l'Université Lille 1
 
+## dernière version
+
+### 2016/17
+
 Vous pouvez récupérer ce dépôt de deux façons faciles :
 
 - en téléchargeant l'archive [zip](https://github.com/ktzanev/m43lille1/archive/master.zip) qui contient la dernière version des fichiers,
