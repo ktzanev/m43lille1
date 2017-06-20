@@ -1,0 +1,79 @@
+\documentclass[a4paper,12pt,reqno]{amsart}
+\usepackage{macros_M43}
+
+\begin{document}
+
+% ==================================
+\hautdepage{
+
+\ifsolutions{Solutions de l'examen}\else{Examen de seconde session}\fi\par\normalfont\normalsize
+20 juin 2017\\{[ durée: 3 heures ]}\par
+}
+% ==================================
+\ifsolutions\else
+%{\fontencoding{U}\fontfamily{futs}\selectfont\char 66\relax}
+\tikz[baseline={(0,0)}]{\NoAutoSpacing\node(e){!};\draw[red,ultra thick,line join=round,yshift=-.15ex](90:1em)--(210:1em)--(330:1em)--cycle;}
+\hfill\begin{minipage}[c]{.9\textwidth}
+\emph{%
+  Vous êtes autorisés à garder une feuille A4 manuscrite recto-verso.\\
+  Tout autre document est interdit. Les calculatrices sont interdites.
+}
+\end{minipage}
+\tsvp
+\vspace*{14mm}
+\fi
+
+
+%-----------------------------------
+\begin{exo} % Vrai ou faux ?
+  Pour chacune des propositions suivantes, indiquer si elle est vraie ou fausse. Si elle est vraie, la démontrer; sinon, donner un contre-exemple. Aucune réponse non justifiée ne sera prise en compte.
+  \begin{enumerate}
+    \item Si $X$ et $Y$ sont deux variables aléatoires de loi de Poisson de paramètre $\lambda,$ alors $\mathbb E(X+Y)=2\lambda$.
+    \item Si $X$ et $Y$ sont deux variables aléatoires de loi de Poisson de paramètre $\lambda,$ alors $X+Y$ suit une loi de Poisson de paramètre $2 \lambda$.
+    \item Dans une urne composée de 3 boules blanches et 3 boules rouges, on effectue deux tirages avec remise puis deux tirages sans remise. On note $X_k$ la variable aléatoire qui vaut $1$ si la $k$-ième boule est rouge et $0$ sinon. Alors les variables aléatoires $X_2$ et $X_4$ ont même loi mais les couples $(X_1, X_2)$ et $(X_3, X_4)$ n'ont pas même loi.
+    \item Soient $X$ et $Y$ deux variables aléatoires admettant un moment d'ordre 2. Si $\operatorname{cov}(X,Y) = 0$ alors $X$ et $Y$ sont indépendantes.
+  \end{enumerate}
+\end{exo}
+\medskip
+
+%-----------------------------------
+\begin{exo}
+  On s'intéresse à deux variables aléatoires définies sur un même
+  espace de probabilité. La variable aléatoire $X$ suit la loi de Bernoulli de paramètre $1/2$ et la variable aléatoire $Y$ suit la loi uniforme sur l'ensemble $\{0,1,2\}$. On sait que la covariance du couple $(X,Y)$ est nulle et qu'on a une chance sur douze d'avoir $X+Y=3$.
+  \begin{enumerate}
+  \item Déterminer $\mathbb E(X)$ et $\mathbb E(Y)$. En déduire $\mathbb E(XY)$.
+   \item Trouver la loi du couple $(X,Y)$ en expliquant pas à pas les calculs effectués.\\
+    \emph{On présentera de préférence le résultat final sous forme d'un tableau.}
+   \item Ces deux variables aléatoires sont-elle indépendantes?
+  \end{enumerate}
+\end{exo}
+
+%-----------------------------------
+\begin{exo}
+  On s'intéresse à la fiabilité d'un alcootest pour automobilistes. Grâce à des études statistiques sur un grand nombre d'automobilistes, on sait que $5\%$ d'entre eux dépassent la dose d'alcool autorisée. Aucun test n'est fiable a $100\%$. Pour celui que l'on considère, la probabilité que le test soit positif quand la dose d'alcool autorisée est dépassée est $0,95$. La probabilité que le test soit négatif quand elle ne l'est pas, vaut aussi $0,95$.
+  \begin{enumerate}
+    \item On contrôle un automobiliste. Quelle est la probabilité que son test soit positif ?
+    \item Quelle est la probabilité qu'un automobiliste ayant un test positif ait réellement dépassé la dose d'alcool autorisée ?
+    \item Un policier affirme : ce test est beaucoup plus fiable le samedi soir à la sortie des boites de nuit ! La proportion d'automobilistes ayant trop bu est alors de $50\%$. En reprenant les deux questions précédentes, justifier la remarque du policier.
+  \end{enumerate}
+\end{exo}
+\medskip
+
+
+%-----------------------------------
+\begin{exo} % {Utilisation du jeu de l'oie pour le calcul de séries.}
+  \begin{enumerate}
+    \item On lance un dé à 6 faces équilibré, on note $X$ le nombre de points obtenus. \\
+      Pour $k$ de $1$ à $5$, calculer $P_{\{ X \neq 6 \}}(X=k)$.
+    \item Un joueur lance un dé à 6 faces équilibré. S'il obtient $1$, $2$, $3$, $4$ ou $5$, il avance son pion du nombre de cases correspondant. S'il obtient $6$ il rejoue, et s'il obtient de nouveau $ 6 $ il rejoue à nouveau, jusqu'à ce qu'il obtienne $1$, $2$, $3$, $4$ ou $5$. Il avance alors son pion d'autant de cases qu'il a obtenu de points en tout. On note $N$ le nombre de fois où le joueur lance le dé, $Y$ le nombre de points obtenus lors du dernier lancer et $Z$ le nombre de cases total dont le pion a avancé. \emph{Par exemple, si le joueur a fait $6$, $6$, $6$ et $3$, il a donc lancé $N=4$ fois le dé, a obtenu $Y=3$ au dernier lancer et a avancé au total de $Z=21$ cases.}\\
+    Donner une expression de la variable aléatoire $Z$ en fonction de $N$ et $Y$.
+    \item Déterminer la loi de $N,$ donner son espérance et sa variance.
+    \item Déterminer la loi de $Y,$ donner son espérance et sa variance.
+    \item Soit $k \in \mathbb N$. Que vaut $\mathbb P(Z= 6k)$ ?
+    \item En admettant l'indépendance de $N$ et $Y$, calculer la loi de $Z$.
+    \item Calculer l'espérance et la variance de $Z$.
+  \end{enumerate}
+\end{exo}
+
+\end{document}
+
