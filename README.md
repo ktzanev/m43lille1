@@ -17,27 +17,27 @@ Vous pouvez récupérer ce dépôt de deux façons faciles :
 
 Dans le répertoire TDs vous pouvez trouver les sources LaTeX et les PDFs (compilés avec XeLaTeX) suivants :
 
-- Feuille n°1 [[tex](https://rawgit.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD1.tex)] [[pdf](https://rawgit.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD1.pdf)]
-- Feuille n°2 [[tex](https://rawgit.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD2.tex)] [[pdf](https://rawgit.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD2.pdf)]
-- Feuille n°3 [[tex](https://rawgit.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD3.tex)] [[pdf](https://rawgit.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD3.pdf)]
-- Feuille n°4 [[tex](https://rawgit.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD4.tex)] [[pdf](https://rawgit.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD4.pdf)]
-- Feuille n°5 [[tex](https://rawgit.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD5.tex)] [[pdf](https://rawgit.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD5.pdf)]
+- Feuille n°1 [[tex](https://rawcdn.githack.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD1.tex)] [[pdf](https://rawcdn.githack.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD1.pdf)]
+- Feuille n°2 [[tex](https://rawcdn.githack.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD2.tex)] [[pdf](https://rawcdn.githack.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD2.pdf)]
+- Feuille n°3 [[tex](https://rawcdn.githack.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD3.tex)] [[pdf](https://rawcdn.githack.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD3.pdf)]
+- Feuille n°4 [[tex](https://rawcdn.githack.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD4.tex)] [[pdf](https://rawcdn.githack.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD4.pdf)]
+- Feuille n°5 [[tex](https://rawcdn.githack.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD5.tex)] [[pdf](https://rawcdn.githack.com/ktzanev/m43lille1/master/TDs/M43_2016-17_TD5.pdf)]
 
-Pour compiler ces feuilles de td vous avez besoin de la feuille de style [macros_M43.sty](https://cdn.rawgit.com/ktzanev/m43lille1/master/TDs/macros_M43.sty).
+Pour compiler ces feuilles de td vous avez besoin de la feuille de style [macros_M43.sty](https://rawcdn.githack.com/ktzanev/m43lille1/master/TDs/macros_M43.sty).
 
 ## versions précédentes
 
 ### 2015/16
 
-- Feuille n°0 [[tex](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD0.tex)] [[pdf](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD0.pdf)]
-- Feuille n°1 [[tex](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD1.tex)] [[pdf](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD1.pdf)]
-- Feuille n°2 [[tex](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD2.tex)] [[pdf](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD2.pdf)]
-- Feuille n°3 [[tex](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD3.tex)] [[pdf](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD3.pdf)]
-- Feuille n°4 [[tex](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD4.tex)] [[pdf](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD4.pdf)]
-- Feuille n°4bis [[tex](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD4bis.tex)] [[pdf](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD4bis.pdf)]
-- Feuille n°5 (non utilisée) [[tex](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD5.tex)] [[pdf](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD5.pdf)]
+- Feuille n°0 [[tex](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD0.tex)] [[pdf](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD0.pdf)]
+- Feuille n°1 [[tex](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD1.tex)] [[pdf](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD1.pdf)]
+- Feuille n°2 [[tex](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD2.tex)] [[pdf](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD2.pdf)]
+- Feuille n°3 [[tex](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD3.tex)] [[pdf](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD3.pdf)]
+- Feuille n°4 [[tex](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD4.tex)] [[pdf](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD4.pdf)]
+- Feuille n°4bis [[tex](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD4bis.tex)] [[pdf](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD4bis.pdf)]
+- Feuille n°5 (non utilisée) [[tex](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD5.tex)] [[pdf](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/M43_2015-16_TD5.pdf)]
 
-Pour compiler ces feuilles de td vous avez besoin de la feuille de style [macros_M43.sty](https://cdn.rawgit.com/ktzanev/m43lille1/v2015-16/TDs/macros_M43.sty).
+Pour compiler ces feuilles de td vous avez besoin de la feuille de style [macros_M43.sty](https://rawcdn.githack.com/ktzanev/m43lille1/v2015-16/TDs/macros_M43.sty).
 
 Pour récupérer tous les fichiers de 2015/16 :
 
